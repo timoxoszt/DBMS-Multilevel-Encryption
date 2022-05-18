@@ -16,5 +16,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Create_An_Accout p = new Create_An_Accout();
+            p.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu p = new Menu();
+            p.Show();
+        }
     }
 }

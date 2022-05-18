@@ -51,7 +51,7 @@
             this.textBox5.BackColor = System.Drawing.Color.LemonChiffon;
             this.textBox5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.Navy;
-            this.textBox5.Location = new System.Drawing.Point(317, 530);
+            this.textBox5.Location = new System.Drawing.Point(314, 505);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(276, 25);
@@ -62,7 +62,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(162, 533);
+            this.label8.Location = new System.Drawing.Point(159, 508);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 17);
@@ -74,7 +74,7 @@
             this.textBox4.BackColor = System.Drawing.Color.LemonChiffon;
             this.textBox4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.Navy;
-            this.textBox4.Location = new System.Drawing.Point(317, 464);
+            this.textBox4.Location = new System.Drawing.Point(314, 439);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(276, 25);
@@ -85,7 +85,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(162, 467);
+            this.label7.Location = new System.Drawing.Point(159, 442);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 17);
@@ -97,7 +97,7 @@
             this.textBox3.BackColor = System.Drawing.Color.LemonChiffon;
             this.textBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.Navy;
-            this.textBox3.Location = new System.Drawing.Point(317, 391);
+            this.textBox3.Location = new System.Drawing.Point(314, 366);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(276, 25);
@@ -108,7 +108,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(167, 394);
+            this.label6.Location = new System.Drawing.Point(164, 369);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 17);
@@ -120,7 +120,7 @@
             this.textBox2.BackColor = System.Drawing.Color.LemonChiffon;
             this.textBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Navy;
-            this.textBox2.Location = new System.Drawing.Point(317, 326);
+            this.textBox2.Location = new System.Drawing.Point(314, 301);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(276, 25);
@@ -131,7 +131,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(167, 329);
+            this.label4.Location = new System.Drawing.Point(164, 304);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 17);
@@ -143,7 +143,7 @@
             this.textBox1.BackColor = System.Drawing.Color.LemonChiffon;
             this.textBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Navy;
-            this.textBox1.Location = new System.Drawing.Point(317, 253);
+            this.textBox1.Location = new System.Drawing.Point(314, 228);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(276, 25);
@@ -154,7 +154,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(167, 261);
+            this.label1.Location = new System.Drawing.Point(164, 236);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 17);
@@ -166,7 +166,7 @@
             this.txt_CategoryID.BackColor = System.Drawing.Color.LemonChiffon;
             this.txt_CategoryID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CategoryID.ForeColor = System.Drawing.Color.Navy;
-            this.txt_CategoryID.Location = new System.Drawing.Point(317, 187);
+            this.txt_CategoryID.Location = new System.Drawing.Point(314, 162);
             this.txt_CategoryID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_CategoryID.Name = "txt_CategoryID";
             this.txt_CategoryID.Size = new System.Drawing.Size(276, 25);
@@ -177,7 +177,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(167, 190);
+            this.label5.Location = new System.Drawing.Point(164, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 17);
@@ -189,7 +189,7 @@
             this.txt_NewID.BackColor = System.Drawing.Color.LemonChiffon;
             this.txt_NewID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NewID.ForeColor = System.Drawing.Color.Navy;
-            this.txt_NewID.Location = new System.Drawing.Point(317, 56);
+            this.txt_NewID.Location = new System.Drawing.Point(314, 31);
             this.txt_NewID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NewID.Name = "txt_NewID";
             this.txt_NewID.Size = new System.Drawing.Size(276, 25);
@@ -200,7 +200,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(167, 61);
+            this.label10.Location = new System.Drawing.Point(164, 36);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 17);
@@ -212,7 +212,7 @@
             this.txt_Description.BackColor = System.Drawing.Color.LemonChiffon;
             this.txt_Description.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Description.ForeColor = System.Drawing.Color.Navy;
-            this.txt_Description.Location = new System.Drawing.Point(317, 120);
+            this.txt_Description.Location = new System.Drawing.Point(314, 95);
             this.txt_Description.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(276, 25);
@@ -223,7 +223,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(167, 123);
+            this.label3.Location = new System.Drawing.Point(164, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 17);

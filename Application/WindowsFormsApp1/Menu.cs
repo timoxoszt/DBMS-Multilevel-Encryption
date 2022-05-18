@@ -16,5 +16,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btn_Info_Click(object sender, EventArgs e)
+        {
+            Profile p = new Profile();
+            p.Show();
+        }
     }
 }

@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btn_Logout = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_Name = new System.Windows.Forms.Label();
-            this.btn_Info = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_Name = new System.Windows.Forms.Label();
+            this.btn_Logout = new System.Windows.Forms.Button();
+            this.btn_Info = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,24 +65,6 @@
             this.panel1.Size = new System.Drawing.Size(233, 727);
             this.panel1.TabIndex = 0;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lbl_Name);
-            this.panel3.Location = new System.Drawing.Point(12, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(205, 143);
-            this.panel3.TabIndex = 7;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(636, 667);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(173, 48);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Đặt Hàng";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Control;
@@ -93,6 +75,33 @@
             this.button3.Text = "Đơn Mua";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.Control;
+            this.button7.Location = new System.Drawing.Point(20, 334);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(173, 55);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Trang Quản Trị";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbl_Name);
+            this.panel3.Location = new System.Drawing.Point(12, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(205, 143);
+            this.panel3.TabIndex = 7;
+            // 
+            // lbl_Name
+            // 
+            this.lbl_Name.AutoSize = true;
+            this.lbl_Name.Location = new System.Drawing.Point(5, 9);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(105, 16);
+            this.lbl_Name.TabIndex = 1;
+            this.lbl_Name.Text = "Tên Người Dùng";
+            // 
             // btn_Logout
             // 
             this.btn_Logout.BackColor = System.Drawing.SystemColors.Control;
@@ -102,6 +111,27 @@
             this.btn_Logout.TabIndex = 0;
             this.btn_Logout.Text = "Đăng Xuất";
             this.btn_Logout.UseVisualStyleBackColor = false;
+            // 
+            // btn_Info
+            // 
+            this.btn_Info.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Info.Location = new System.Drawing.Point(20, 191);
+            this.btn_Info.Name = "btn_Info";
+            this.btn_Info.Size = new System.Drawing.Size(173, 46);
+            this.btn_Info.TabIndex = 0;
+            this.btn_Info.Text = "Thông Tin Cá Nhân";
+            this.btn_Info.UseVisualStyleBackColor = false;
+            this.btn_Info.Click += new System.EventHandler(this.btn_Info_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.Location = new System.Drawing.Point(636, 667);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(173, 48);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Đặt Hàng";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -120,43 +150,49 @@
             this.panel2.Size = new System.Drawing.Size(835, 727);
             this.panel2.TabIndex = 2;
             // 
-            // lbl_Name
+            // label4
             // 
-            this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(5, 9);
-            this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(105, 16);
-            this.lbl_Name.TabIndex = 1;
-            this.lbl_Name.Text = "Tên Người Dùng";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(316, 579);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Số Lượng";
             // 
-            // btn_Info
+            // textBox1
             // 
-            this.btn_Info.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Info.Location = new System.Drawing.Point(20, 191);
-            this.btn_Info.Name = "btn_Info";
-            this.btn_Info.Size = new System.Drawing.Size(173, 46);
-            this.btn_Info.TabIndex = 0;
-            this.btn_Info.Text = "Thông Tin Cá Nhân";
-            this.btn_Info.UseVisualStyleBackColor = false;
+            this.textBox1.Location = new System.Drawing.Point(391, 574);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "1";
             // 
-            // pictureBox1
+            // label3
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(114, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(613, 539);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(523, 646);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Giá";
             // 
-            // button1
+            // label2
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(748, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 57);
-            this.button1.TabIndex = 3;
-            this.button1.Text = ">>";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(364, 646);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "DV";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(227, 646);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tên";
             // 
             // button4
             // 
@@ -168,59 +204,24 @@
             this.button4.Text = "<<";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(227, 646);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tên";
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(748, 259);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 57);
+            this.button1.TabIndex = 3;
+            this.button1.Text = ">>";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 646);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "DV";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(523, 646);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Giá";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.Control;
-            this.button7.Location = new System.Drawing.Point(20, 334);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(173, 55);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Trang Quản Trị";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(391, 574);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(316, 579);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Số Lượng";
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Location = new System.Drawing.Point(114, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(613, 539);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Menu
             // 
