@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             List_HH p = new List_HH();
-            p.Show(); 
+            p.Show();
         }
     }
 }
