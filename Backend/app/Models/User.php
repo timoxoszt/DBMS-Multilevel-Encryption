@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Dyrynda\Database\Support\GeneratesUuid;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, GeneratesUuid;
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +20,14 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'ho_ten',
+        'uuid',
+        'sdt',
+        'ngay_sinh',
+        'cmnd',
+        'dia_chi',
+        'ngay_dk',
+        'stk',
         'email',
         'password',
     ];

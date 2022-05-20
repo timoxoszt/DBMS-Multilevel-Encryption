@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('ten_sp', 40);
             $table->string('dvt', 20);
             $table->integer('gia');
-            $table->longText('image');
+            $table->longText('image')->nullable();
             $table->timestamps();
         });
     }
