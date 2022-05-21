@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\OrderController;
 use App\Http\Controllers\API\AuthController;
 
 /*
@@ -17,6 +20,17 @@ use App\Http\Controllers\API\AuthController;
 Route::post('login', [AuthController::class, 'signin']);
 Route::post('register', [AuthController::class, 'signup']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->group(function() {
+    Route::resource('users', UserController::class);
+    Route::resource('products', ProductController::class);
+    Route::resource('orders', OrderController::class);
+    Route::get('/profile', [UserController::class, 'profile']);
+    Route::post('/logout', [AuthController::class, 'signout']);
+});
+
+Route::fallback(function(){
+    return response()->json([
+        'success' => false,
+        'message' => 'Page not found.',
+    ], 404);
 });
