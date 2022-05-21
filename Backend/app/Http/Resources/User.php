@@ -24,7 +24,7 @@ class User extends JsonResource
             'cmnd' => $this->cmnd,
             'ngay_sinh' => $this->ngay_sinh,
             'email' => $this->email,
-            'ngay_dk' => $this->created_at,
+            'ngay_dk' => $this->created_at->format('d/m/Y'),
         ];
     }
 }
