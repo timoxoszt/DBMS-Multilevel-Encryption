@@ -20,7 +20,7 @@ class Order extends JsonResource
             'user_id' => $this->user_id,
             'ma_sp' => $this->ma_sp,
             'so_luong' => $this->so_luong,
-            'ngay_dat' => $this->created_at,
+            'ngay_dat' => $this->created_at->format('d/m/Y H:i:s'),
         ];
     }
 }
