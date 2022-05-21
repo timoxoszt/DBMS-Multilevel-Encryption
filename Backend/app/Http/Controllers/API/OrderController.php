@@ -20,6 +20,8 @@ class OrderController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
+
+     //  ONLY ADMIN INDEX AND SHOW  //
     public function index()
     {
         $orders = Order::all();
@@ -91,8 +93,31 @@ class OrderController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($uuid)
     {
-        //
+        $user = Auth::user();
+        $order = Order::where('uuid', $uuid)->first();
+
+        if (is_null($order)) {
+            return $this->sendError('Order does not exist.');
+        }
+        // Check Authorise Order Delete
+        if($order->user_id == $user->id){           
+            $order->delete();
+            return $this->sendResponse([], 'Order deleted.');              
+        }else{
+            return $this->sendError('Unauthorised.');
+        } 
+    }
+
+    public function mybills()
+    {
+        $user = Auth::user();
+        $orders = Order::where('user_id', $user->id)->get();  
+        try{
+            return $this->sendResponse(OrderResource::collection($orders), 'Orders fetched.');
+        }catch(\Exception $e){
+            return $this->sendResponse([],'Orders fetched.');
+        }
     }
 }
