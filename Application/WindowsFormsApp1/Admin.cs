@@ -18,13 +18,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_DanhSachNguoiDung_Click(object sender, EventArgs e)
         {
             List_User p = new List_User();
             p.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_DanhSachHangHoa_Click(object sender, EventArgs e)
         {
             List_HH p = new List_HH();
             p.Show();

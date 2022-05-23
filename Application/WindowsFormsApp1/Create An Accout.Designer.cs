@@ -35,19 +35,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_MatKhau = new System.Windows.Forms.TextBox();
+            this.txt_HoVaTen = new System.Windows.Forms.TextBox();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
+            this.txt_SoChungMinh = new System.Windows.Forms.TextBox();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.btn_DangKy = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_STK = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_ThongBao = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_XNMatKhau = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -113,58 +113,58 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Ngày sinh";
             // 
-            // textBox1
+            // txt_Email
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 22);
-            this.textBox1.TabIndex = 7;
+            this.txt_Email.Location = new System.Drawing.Point(274, 35);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(254, 22);
+            this.txt_Email.TabIndex = 7;
             // 
-            // textBox2
+            // txt_MatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 22);
-            this.textBox2.TabIndex = 8;
+            this.txt_MatKhau.Location = new System.Drawing.Point(274, 77);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Size = new System.Drawing.Size(254, 22);
+            this.txt_MatKhau.TabIndex = 8;
             // 
-            // textBox3
+            // txt_HoVaTen
             // 
-            this.textBox3.Location = new System.Drawing.Point(274, 135);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 22);
-            this.textBox3.TabIndex = 9;
+            this.txt_HoVaTen.Location = new System.Drawing.Point(274, 135);
+            this.txt_HoVaTen.Name = "txt_HoVaTen";
+            this.txt_HoVaTen.Size = new System.Drawing.Size(254, 22);
+            this.txt_HoVaTen.TabIndex = 9;
             // 
-            // textBox4
+            // txt_SDT
             // 
-            this.textBox4.Location = new System.Drawing.Point(274, 172);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(254, 22);
-            this.textBox4.TabIndex = 10;
+            this.txt_SDT.Location = new System.Drawing.Point(274, 172);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Size = new System.Drawing.Size(254, 22);
+            this.txt_SDT.TabIndex = 10;
             // 
-            // textBox5
+            // txt_SoChungMinh
             // 
-            this.textBox5.Location = new System.Drawing.Point(274, 257);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(254, 22);
-            this.textBox5.TabIndex = 11;
+            this.txt_SoChungMinh.Location = new System.Drawing.Point(274, 257);
+            this.txt_SoChungMinh.Name = "txt_SoChungMinh";
+            this.txt_SoChungMinh.Size = new System.Drawing.Size(254, 22);
+            this.txt_SoChungMinh.TabIndex = 11;
             // 
-            // textBox6
+            // txt_DiaChi
             // 
-            this.textBox6.Location = new System.Drawing.Point(274, 298);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(254, 22);
-            this.textBox6.TabIndex = 12;
+            this.txt_DiaChi.Location = new System.Drawing.Point(274, 298);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.Size = new System.Drawing.Size(254, 22);
+            this.txt_DiaChi.TabIndex = 12;
             // 
-            // button1
+            // btn_DangKy
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(286, 405);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 52);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Đăng Ký";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_DangKy.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_DangKy.Location = new System.Drawing.Point(286, 405);
+            this.btn_DangKy.Name = "btn_DangKy";
+            this.btn_DangKy.Size = new System.Drawing.Size(130, 52);
+            this.btn_DangKy.TabIndex = 14;
+            this.btn_DangKy.Text = "Đăng Ký";
+            this.btn_DangKy.UseVisualStyleBackColor = false;
+            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // dateTimePicker1
             // 
@@ -173,12 +173,12 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(254, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // textBox7
+            // txt_STK
             // 
-            this.textBox7.Location = new System.Drawing.Point(274, 219);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(254, 22);
-            this.textBox7.TabIndex = 17;
+            this.txt_STK.Location = new System.Drawing.Point(274, 219);
+            this.txt_STK.Name = "txt_STK";
+            this.txt_STK.Size = new System.Drawing.Size(254, 22);
+            this.txt_STK.TabIndex = 17;
             // 
             // label8
             // 
@@ -189,14 +189,14 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "STK";
             // 
-            // label9
+            // lbl_ThongBao
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(271, 373);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 16);
-            this.label9.TabIndex = 18;
+            this.lbl_ThongBao.AutoSize = true;
+            this.lbl_ThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbl_ThongBao.Location = new System.Drawing.Point(271, 382);
+            this.lbl_ThongBao.Name = "lbl_ThongBao";
+            this.lbl_ThongBao.Size = new System.Drawing.Size(0, 16);
+            this.lbl_ThongBao.TabIndex = 18;
             // 
             // label10
             // 
@@ -207,12 +207,12 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Xác nhận mật khẩu";
             // 
-            // textBox8
+            // txt_XNMatKhau
             // 
-            this.textBox8.Location = new System.Drawing.Point(274, 106);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(254, 22);
-            this.textBox8.TabIndex = 20;
+            this.txt_XNMatKhau.Location = new System.Drawing.Point(274, 106);
+            this.txt_XNMatKhau.Name = "txt_XNMatKhau";
+            this.txt_XNMatKhau.Size = new System.Drawing.Size(254, 22);
+            this.txt_XNMatKhau.TabIndex = 20;
             // 
             // Create_An_Accout
             // 
@@ -220,19 +220,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(687, 486);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txt_XNMatKhau);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.lbl_ThongBao);
+            this.Controls.Add(this.txt_STK);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_DangKy);
+            this.Controls.Add(this.txt_DiaChi);
+            this.Controls.Add(this.txt_SoChungMinh);
+            this.Controls.Add(this.txt_SDT);
+            this.Controls.Add(this.txt_HoVaTen);
+            this.Controls.Add(this.txt_MatKhau);
+            this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -256,18 +256,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_Email;
+        private System.Windows.Forms.TextBox txt_MatKhau;
+        private System.Windows.Forms.TextBox txt_HoVaTen;
+        private System.Windows.Forms.TextBox txt_SDT;
+        private System.Windows.Forms.TextBox txt_SoChungMinh;
+        private System.Windows.Forms.TextBox txt_DiaChi;
+        private System.Windows.Forms.Button btn_DangKy;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_STK;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_ThongBao;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_XNMatKhau;
     }
 }

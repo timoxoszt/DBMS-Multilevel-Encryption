@@ -42,26 +42,26 @@ namespace WindowsFormsApp1
         private void InitializeMyControl()
         {
             // Set to no text.
-            textBox2.Text = "";
+            txt_MatKhau.Text = "";
             // The password character is an asterisk.
-            textBox2.PasswordChar = '*';
+            txt_MatKhau.PasswordChar = '*';
             // The control will allow no more than 14 characters.
-            textBox2.MaxLength = 8;
+            txt_MatKhau.MaxLength = 8;
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_DangKy_Click(object sender, EventArgs e)
         {
             Create_An_Accout p = new Create_An_Accout();
             p.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             // Create a request using a URL that can receive a post.
             WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/login");
             // Set the Method property of the request to POST.
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
-            string postData = "email=" + textBox1.Text + "&password=" + textBox2.Text;
+            string postData = "email=" + txt_Email.Text + "&password=" + txt_MatKhau.Text;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
             // Set the ContentType property of the WebRequest.
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
 
             try
             {
-                label3.Text = "";
+                lbl_ThongBao.Text = "";
                 // Get the response.
                 WebResponse response = request.GetResponse();
                 // Display the status.
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception)
             {
-                label3.Text = "Đăng nhập không thành công.";
+                lbl_ThongBao.Text = "Đăng nhập không thành công.";
             }
         }
 

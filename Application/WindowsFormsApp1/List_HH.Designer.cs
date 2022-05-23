@@ -41,9 +41,9 @@
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Image = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
             // 
             // LV_Data
@@ -57,7 +57,7 @@
             this.LV_Data.Location = new System.Drawing.Point(0, 0);
             this.LV_Data.Margin = new System.Windows.Forms.Padding(4);
             this.LV_Data.Name = "LV_Data";
-            this.LV_Data.Size = new System.Drawing.Size(503, 630);
+            this.LV_Data.Size = new System.Drawing.Size(547, 654);
             this.LV_Data.TabIndex = 10;
             this.LV_Data.UseCompatibleStateImageBehavior = false;
             this.LV_Data.View = System.Windows.Forms.View.Details;
@@ -66,7 +66,7 @@
             // 
             this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Del.Location = new System.Drawing.Point(309, 498);
+            this.btn_Del.Location = new System.Drawing.Point(317, 581);
             this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(108, 39);
@@ -78,7 +78,7 @@
             // 
             this.btn_Create.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Create.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Create.Location = new System.Drawing.Point(8, 498);
+            this.btn_Create.Location = new System.Drawing.Point(16, 581);
             this.btn_Create.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(108, 39);
@@ -90,7 +90,7 @@
             // 
             this.btn_Save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Save.Location = new System.Drawing.Point(164, 498);
+            this.btn_Save.Location = new System.Drawing.Point(172, 581);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(108, 39);
@@ -103,7 +103,7 @@
             this.txt_CategoryID.BackColor = System.Drawing.Color.LemonChiffon;
             this.txt_CategoryID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CategoryID.ForeColor = System.Drawing.Color.Navy;
-            this.txt_CategoryID.Location = new System.Drawing.Point(141, 191);
+            this.txt_CategoryID.Location = new System.Drawing.Point(141, 173);
             this.txt_CategoryID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_CategoryID.Name = "txt_CategoryID";
             this.txt_CategoryID.Size = new System.Drawing.Size(276, 25);
@@ -114,7 +114,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(37, 195);
+            this.label5.Location = new System.Drawing.Point(37, 177);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 17);
@@ -126,7 +126,7 @@
             this.txt_NewID.BackColor = System.Drawing.Color.LemonChiffon;
             this.txt_NewID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NewID.ForeColor = System.Drawing.Color.Navy;
-            this.txt_NewID.Location = new System.Drawing.Point(141, 271);
+            this.txt_NewID.Location = new System.Drawing.Point(141, 237);
             this.txt_NewID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NewID.Name = "txt_NewID";
             this.txt_NewID.Size = new System.Drawing.Size(276, 25);
@@ -137,7 +137,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(37, 275);
+            this.label10.Location = new System.Drawing.Point(37, 241);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(30, 17);
@@ -149,7 +149,7 @@
             this.txt_Description.BackColor = System.Drawing.Color.LemonChiffon;
             this.txt_Description.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Description.ForeColor = System.Drawing.Color.Navy;
-            this.txt_Description.Location = new System.Drawing.Point(141, 120);
+            this.txt_Description.Location = new System.Drawing.Point(141, 108);
             this.txt_Description.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(276, 25);
@@ -160,7 +160,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(37, 124);
+            this.label3.Location = new System.Drawing.Point(37, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 17);
@@ -172,7 +172,7 @@
             this.txt_ID.BackColor = System.Drawing.Color.LemonChiffon;
             this.txt_ID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ID.ForeColor = System.Drawing.Color.Navy;
-            this.txt_ID.Location = new System.Drawing.Point(141, 51);
+            this.txt_ID.Location = new System.Drawing.Point(141, 42);
             this.txt_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(276, 25);
@@ -183,7 +183,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(37, 54);
+            this.label2.Location = new System.Drawing.Point(37, 45);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
@@ -193,7 +193,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.Image);
             this.panel1.Controls.Add(this.btn_Del);
             this.panel1.Controls.Add(this.btn_Create);
             this.panel1.Controls.Add(this.btn_Save);
@@ -206,33 +206,33 @@
             this.panel1.Controls.Add(this.txt_ID);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(503, 0);
+            this.panel1.Location = new System.Drawing.Point(547, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(440, 630);
+            this.panel1.Size = new System.Drawing.Size(440, 654);
             this.panel1.TabIndex = 9;
             // 
-            // pictureBox1
+            // Image
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 303);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 175);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.Image.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Image.Location = new System.Drawing.Point(40, 289);
+            this.Image.Name = "Image";
+            this.Image.Size = new System.Drawing.Size(377, 263);
+            this.Image.TabIndex = 26;
+            this.Image.TabStop = false;
             // 
             // List_HH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 630);
+            this.ClientSize = new System.Drawing.Size(987, 654);
             this.Controls.Add(this.LV_Data);
             this.Controls.Add(this.panel1);
             this.Name = "List_HH";
             this.Text = "List_HH";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,6 +252,6 @@
         private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Image;
     }
 }

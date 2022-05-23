@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_DSNguoiDung = new System.Windows.Forms.Button();
+            this.btn_DanhSachHangHoa = new System.Windows.Forms.Button();
+            this.btn_DanhSachDonMua = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_DSNguoiDung
             // 
-            this.button1.Location = new System.Drawing.Point(26, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 64);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Danh Sách Người Dùng ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_DSNguoiDung.Location = new System.Drawing.Point(26, 106);
+            this.btn_DSNguoiDung.Name = "btn_DSNguoiDung";
+            this.btn_DSNguoiDung.Size = new System.Drawing.Size(129, 64);
+            this.btn_DSNguoiDung.TabIndex = 0;
+            this.btn_DSNguoiDung.Text = "Danh Sách Người Dùng ";
+            this.btn_DSNguoiDung.UseVisualStyleBackColor = true;
+            this.btn_DSNguoiDung.Click += new System.EventHandler(this.btn_DanhSachNguoiDung_Click);
             // 
-            // button2
+            // btn_DanhSachHangHoa
             // 
-            this.button2.Location = new System.Drawing.Point(210, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Danh Sách Hàng Hóa";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_DanhSachHangHoa.Location = new System.Drawing.Point(210, 106);
+            this.btn_DanhSachHangHoa.Name = "btn_DanhSachHangHoa";
+            this.btn_DanhSachHangHoa.Size = new System.Drawing.Size(127, 64);
+            this.btn_DanhSachHangHoa.TabIndex = 1;
+            this.btn_DanhSachHangHoa.Text = "Danh Sách Hàng Hóa";
+            this.btn_DanhSachHangHoa.UseVisualStyleBackColor = true;
+            this.btn_DanhSachHangHoa.Click += new System.EventHandler(this.btn_DanhSachHangHoa_Click);
             // 
-            // button3
+            // btn_DanhSachDonMua
             // 
-            this.button3.Location = new System.Drawing.Point(404, 106);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 64);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Danh Sách Đơn Mua";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_DanhSachDonMua.Location = new System.Drawing.Point(404, 106);
+            this.btn_DanhSachDonMua.Name = "btn_DanhSachDonMua";
+            this.btn_DanhSachDonMua.Size = new System.Drawing.Size(127, 64);
+            this.btn_DanhSachDonMua.TabIndex = 2;
+            this.btn_DanhSachDonMua.Text = "Danh Sách Đơn Mua";
+            this.btn_DanhSachDonMua.UseVisualStyleBackColor = true;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 305);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_DanhSachDonMua);
+            this.Controls.Add(this.btn_DanhSachHangHoa);
+            this.Controls.Add(this.btn_DSNguoiDung);
             this.Name = "Admin";
             this.Text = "Admin";
             this.ResumeLayout(false);
@@ -78,8 +78,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_DSNguoiDung;
+        private System.Windows.Forms.Button btn_DanhSachHangHoa;
+        private System.Windows.Forms.Button btn_DanhSachDonMua;
     }
 }

@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_MatKhau = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_DangNhap = new System.Windows.Forms.Button();
+            this.btn_DangKy = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_ThongBao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_Email
             // 
-            this.textBox1.Location = new System.Drawing.Point(223, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 22);
-            this.textBox1.TabIndex = 0;
+            this.txt_Email.Location = new System.Drawing.Point(223, 93);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(178, 22);
+            this.txt_Email.TabIndex = 0;
             // 
-            // textBox2
+            // txt_MatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(223, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 22);
-            this.textBox2.TabIndex = 1;
+            this.txt_MatKhau.Location = new System.Drawing.Point(223, 140);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Size = new System.Drawing.Size(178, 22);
+            this.txt_MatKhau.TabIndex = 1;
             // 
             // label1
             // 
@@ -70,25 +70,25 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Mật Khẩu";
             // 
-            // button1
+            // btn_DangNhap
             // 
-            this.button1.Location = new System.Drawing.Point(163, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 55);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Đăng Nhập";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_DangNhap.Location = new System.Drawing.Point(163, 221);
+            this.btn_DangNhap.Name = "btn_DangNhap";
+            this.btn_DangNhap.Size = new System.Drawing.Size(120, 55);
+            this.btn_DangNhap.TabIndex = 6;
+            this.btn_DangNhap.Text = "Đăng Nhập";
+            this.btn_DangNhap.UseVisualStyleBackColor = true;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
-            // button2
+            // btn_DangKy
             // 
-            this.button2.Location = new System.Drawing.Point(329, 244);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 32);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Đăng Ký";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_DangKy.Location = new System.Drawing.Point(329, 244);
+            this.btn_DangKy.Name = "btn_DangKy";
+            this.btn_DangKy.Size = new System.Drawing.Size(133, 32);
+            this.btn_DangKy.TabIndex = 7;
+            this.btn_DangKy.Text = "Đăng Ký";
+            this.btn_DangKy.UseVisualStyleBackColor = true;
+            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // label4
             // 
@@ -100,29 +100,29 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Đăng Nhập Vào Ứng Dụng";
             // 
-            // label3
+            // lbl_ThongBao
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(220, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 16);
-            this.label3.TabIndex = 9;
+            this.lbl_ThongBao.AutoSize = true;
+            this.lbl_ThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbl_ThongBao.Location = new System.Drawing.Point(220, 175);
+            this.lbl_ThongBao.Name = "lbl_ThongBao";
+            this.lbl_ThongBao.Size = new System.Drawing.Size(0, 16);
+            this.lbl_ThongBao.TabIndex = 9;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 332);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_ThongBao);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_DangKy);
+            this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_MatKhau);
+            this.Controls.Add(this.txt_Email);
             this.Name = "Login";
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
@@ -132,13 +132,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Email;
+        private System.Windows.Forms.TextBox txt_MatKhau;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_DangNhap;
+        private System.Windows.Forms.Button btn_DangKy;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_ThongBao;
     }
 }
