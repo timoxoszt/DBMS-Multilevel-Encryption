@@ -161,6 +161,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Đăng Ký";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -171,7 +172,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(271, 219);
+            this.textBox7.Location = new System.Drawing.Point(274, 219);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(254, 22);
             this.textBox7.TabIndex = 17;

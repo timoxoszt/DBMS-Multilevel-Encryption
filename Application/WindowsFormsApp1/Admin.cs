@@ -7,17 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
 
 namespace WindowsFormsApp1
 {
     
     public partial class Admin : Form
-    {
-        public static HttpClient client = new HttpClient();
-        
+    {       
         public Admin()
         {
             InitializeComponent();

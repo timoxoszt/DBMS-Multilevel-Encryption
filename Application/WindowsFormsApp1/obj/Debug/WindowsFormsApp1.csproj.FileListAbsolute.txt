@@ -28,4 +28,9 @@ C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsA
 C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Product.resources
+C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
