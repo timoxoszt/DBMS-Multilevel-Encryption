@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
         public Create_An_Accout()
         {
             InitializeComponent();
+            InitializeMyControl();
         }
         public class Data
         {
@@ -31,15 +32,36 @@ namespace WindowsFormsApp1
             public Data data { get; set; }
             public string message { get; set; }
         }
-
+        private void InitializeMyControl()
+        {
+            // Set to no text.
+            textBox2.Text = "";
+            // The password character is an asterisk.
+            textBox2.PasswordChar = '*';
+            // The control will allow no more than 14 characters.
+            textBox2.MaxLength = 8;
+            textBox8.Text = "";
+            textBox8.PasswordChar = '*';
+            textBox8.MaxLength = 8;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            string selectDateAsString = dateTimePicker1.Value.ToString("yyyyMMdd");
+
             // Create a request using a URL that can receive a post.
             WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/register");
             // Set the Method property of the request to POST.
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
-            string postData = "email=" + textBox1.Text + "&password=" + textBox2.Text;
+            string postData = "email=" + textBox1.Text
+                        + "&password=" + textBox2.Text
+                        + "&confirm_password=" + textBox8.Text
+                        + "&ho_ten=" + textBox3.Text
+                        + "&sdt=" + textBox4.Text
+                        + "&stk=" + textBox5.Text
+                        + "&cmnd=" + textBox6.Text
+                        + "&dia_chi=" + textBox7.Text
+                        + "&ngay_sinh=" + selectDateAsString;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
             // Set the ContentType property of the WebRequest.
@@ -56,7 +78,7 @@ namespace WindowsFormsApp1
 
             try
             {
-                label3.Text = "";
+                label9.Text = "";
                 // Get the response.
                 WebResponse response = request.GetResponse();
                 // Display the status.
@@ -73,10 +95,9 @@ namespace WindowsFormsApp1
                     string responseFromServer = reader.ReadToEnd();
                     // Display the content.
                     datajson = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(responseFromServer);
-                    this.Hide();
-                    Menu p = new Menu();
-                    p.ShowDialog();
-                    this.Show();
+
+                    label9.Text = "Đăng kí thành công.";
+                    MessageBox.Show(datajson.data.ToString());
 
                 }
                 // Close the response.
@@ -84,7 +105,8 @@ namespace WindowsFormsApp1
             }
             catch (Exception)
             {
-                label3.Text = "Đăng kí không thành công.";
+                label9.Text = "";
+                label9.Text = "Đăng kí không thành công.";
             }
         }
     }
