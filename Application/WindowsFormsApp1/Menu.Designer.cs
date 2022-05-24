@@ -111,6 +111,7 @@
             this.btn_Logout.TabIndex = 0;
             this.btn_Logout.Text = "Đăng Xuất";
             this.btn_Logout.UseVisualStyleBackColor = false;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // btn_Info
             // 

@@ -242,6 +242,7 @@
             this.btn_CapNhat.TabIndex = 52;
             this.btn_CapNhat.Text = "Cập Nhật";
             this.btn_CapNhat.UseVisualStyleBackColor = true;
+            this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
             // 
             // Profile
             // 
@@ -268,6 +269,7 @@
             this.Controls.Add(this.label3);
             this.Name = "Profile";
             this.Text = "Profile";
+            this.Load += new System.EventHandler(this.Profile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

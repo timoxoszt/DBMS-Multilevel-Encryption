@@ -38,11 +38,8 @@ namespace WindowsFormsApp1
             txt_MatKhau.Text = "";
             // The password character is an asterisk.
             txt_MatKhau.PasswordChar = '*';
-            // The control will allow no more than 14 characters.
-            txt_MatKhau.MaxLength = 8;
             txt_XNMatKhau.Text = "";
             txt_XNMatKhau.PasswordChar = '*';
-            txt_XNMatKhau.MaxLength = 8;
         }
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
@@ -81,8 +78,6 @@ namespace WindowsFormsApp1
                 lbl_ThongBao.Text = "";
                 // Get the response.
                 WebResponse response = request.GetResponse();
-                // Display the status.
-                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
 
                 Root datajson = null;
                 // Get the stream containing content returned by the server.

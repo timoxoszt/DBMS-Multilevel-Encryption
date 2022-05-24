@@ -22,5 +22,10 @@ namespace WindowsFormsApp1
             Profile p = new Profile();
             p.Show();
         }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

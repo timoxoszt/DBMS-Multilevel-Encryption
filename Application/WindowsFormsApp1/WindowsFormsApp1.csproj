@@ -74,11 +74,11 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Create An Accout.cs">
+    <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Create An Accout.Designer.cs">
-      <DependentUpon>Create An Accout.cs</DependentUpon>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="List_HH.cs">
       <SubType>Form</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Create An Accout.resx">
-      <DependentUpon>Create An Accout.cs</DependentUpon>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="List_HH.resx">
       <DependentUpon>List_HH.cs</DependentUpon>

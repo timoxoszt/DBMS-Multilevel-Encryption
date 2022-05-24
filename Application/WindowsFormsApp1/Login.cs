@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-
+        public static string token;
         public class Data
         {
             public string token { get; set; }
@@ -45,8 +45,6 @@ namespace WindowsFormsApp1
             txt_MatKhau.Text = "";
             // The password character is an asterisk.
             txt_MatKhau.PasswordChar = '*';
-            // The control will allow no more than 14 characters.
-            txt_MatKhau.MaxLength = 8;
         }
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
@@ -61,7 +59,7 @@ namespace WindowsFormsApp1
             // Set the Method property of the request to POST.
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
-            string postData = "email=" + txt_Email.Text + "&password=" + txt_MatKhau.Text;
+            string postData = "email=onlytien2002@gmail.com" + txt_Email.Text + "&password=12345678" + txt_MatKhau.Text;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
             // Set the ContentType property of the WebRequest.
@@ -96,10 +94,10 @@ namespace WindowsFormsApp1
                     // Display the content.
                     datajson = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(responseFromServer);
                     this.Hide();
+                    token = datajson.data.token;
                     Menu p = new Menu();
                     p.ShowDialog();
                     this.Show();
-                    
                 }
                 // Close the response.
                 response.Close();
