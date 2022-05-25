@@ -32,11 +32,11 @@
             this.btn_Del = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.txt_CategoryID = new System.Windows.Forms.TextBox();
+            this.txt_DVT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_NewID = new System.Windows.Forms.TextBox();
+            this.txt_Price = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_Description = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,14 +53,17 @@
             this.LV_Data.ForeColor = System.Drawing.Color.Navy;
             this.LV_Data.FullRowSelect = true;
             this.LV_Data.GridLines = true;
+            this.LV_Data.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.LV_Data.HideSelection = false;
             this.LV_Data.Location = new System.Drawing.Point(0, 0);
             this.LV_Data.Margin = new System.Windows.Forms.Padding(4);
+            this.LV_Data.MultiSelect = false;
             this.LV_Data.Name = "LV_Data";
             this.LV_Data.Size = new System.Drawing.Size(547, 654);
             this.LV_Data.TabIndex = 10;
             this.LV_Data.UseCompatibleStateImageBehavior = false;
             this.LV_Data.View = System.Windows.Forms.View.Details;
+            this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
             // btn_Del
             // 
@@ -98,16 +101,16 @@
             this.btn_Save.Text = "Cập Nhật";
             this.btn_Save.UseVisualStyleBackColor = true;
             // 
-            // txt_CategoryID
+            // txt_DVT
             // 
-            this.txt_CategoryID.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txt_CategoryID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CategoryID.ForeColor = System.Drawing.Color.Navy;
-            this.txt_CategoryID.Location = new System.Drawing.Point(141, 173);
-            this.txt_CategoryID.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_CategoryID.Name = "txt_CategoryID";
-            this.txt_CategoryID.Size = new System.Drawing.Size(276, 25);
-            this.txt_CategoryID.TabIndex = 18;
+            this.txt_DVT.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txt_DVT.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DVT.ForeColor = System.Drawing.Color.Navy;
+            this.txt_DVT.Location = new System.Drawing.Point(141, 173);
+            this.txt_DVT.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_DVT.Name = "txt_DVT";
+            this.txt_DVT.Size = new System.Drawing.Size(276, 25);
+            this.txt_DVT.TabIndex = 18;
             // 
             // label5
             // 
@@ -121,16 +124,16 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Đơn Vị Tính";
             // 
-            // txt_NewID
+            // txt_Price
             // 
-            this.txt_NewID.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txt_NewID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NewID.ForeColor = System.Drawing.Color.Navy;
-            this.txt_NewID.Location = new System.Drawing.Point(141, 237);
-            this.txt_NewID.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_NewID.Name = "txt_NewID";
-            this.txt_NewID.Size = new System.Drawing.Size(276, 25);
-            this.txt_NewID.TabIndex = 19;
+            this.txt_Price.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txt_Price.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Price.ForeColor = System.Drawing.Color.Navy;
+            this.txt_Price.Location = new System.Drawing.Point(141, 237);
+            this.txt_Price.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Price.Name = "txt_Price";
+            this.txt_Price.Size = new System.Drawing.Size(276, 25);
+            this.txt_Price.TabIndex = 19;
             // 
             // label10
             // 
@@ -144,16 +147,16 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "Giá";
             // 
-            // txt_Description
+            // txt_Name
             // 
-            this.txt_Description.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txt_Description.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Description.ForeColor = System.Drawing.Color.Navy;
-            this.txt_Description.Location = new System.Drawing.Point(141, 108);
-            this.txt_Description.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(276, 25);
-            this.txt_Description.TabIndex = 22;
+            this.txt_Name.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txt_Name.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Name.ForeColor = System.Drawing.Color.Navy;
+            this.txt_Name.Location = new System.Drawing.Point(141, 108);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(276, 25);
+            this.txt_Name.TabIndex = 22;
             // 
             // label3
             // 
@@ -197,11 +200,11 @@
             this.panel1.Controls.Add(this.btn_Del);
             this.panel1.Controls.Add(this.btn_Create);
             this.panel1.Controls.Add(this.btn_Save);
-            this.panel1.Controls.Add(this.txt_CategoryID);
+            this.panel1.Controls.Add(this.txt_DVT);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txt_NewID);
+            this.panel1.Controls.Add(this.txt_Price);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txt_Description);
+            this.panel1.Controls.Add(this.txt_Name);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txt_ID);
             this.panel1.Controls.Add(this.label2);
@@ -230,6 +233,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "List_HH";
             this.Text = "List_HH";
+            this.Load += new System.EventHandler(this.List_HH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Image)).EndInit();
@@ -243,11 +247,11 @@
         private System.Windows.Forms.Button btn_Del;
         private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.TextBox txt_CategoryID;
+        private System.Windows.Forms.TextBox txt_DVT;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_NewID;
+        private System.Windows.Forms.TextBox txt_Price;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txt_Description;
+        private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.Label label2;

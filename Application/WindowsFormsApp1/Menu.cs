@@ -27,5 +27,17 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void btn_Admin_Click(object sender, EventArgs e)
+        {
+            List_User p = new List_User();
+            p.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List_HH p = new List_HH();
+            p.Show();  
+        }
     }
 }

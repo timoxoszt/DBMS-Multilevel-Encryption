@@ -107,6 +107,5 @@ namespace WindowsFormsApp1
                 lbl_ThongBao.Text = "Đăng nhập không thành công.";
             }
         }
-
     }
 }
