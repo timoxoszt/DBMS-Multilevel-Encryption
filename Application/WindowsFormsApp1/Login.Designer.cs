@@ -125,6 +125,7 @@
             this.Controls.Add(this.txt_Email);
             this.Name = "Login";
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

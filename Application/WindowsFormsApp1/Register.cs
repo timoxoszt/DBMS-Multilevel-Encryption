@@ -193,11 +193,12 @@ namespace WindowsFormsApp1
         }
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
+            lbl_ThongBao.Text = "";
             count++;
             if(count == 4)
             {
                 count = 0;
-                MessageBox.Show("Đăng kí không thành công quá 3 lần, chương trình sẽ tự động đóng lại.");
+                MessageBox.Show("Đăng kí không thành công quá 3 lần, chương trình sẽ tự động đóng lại.", "Thông báo");
                 this.Close();
             }
             string selectDateAsString = dateTimePicker1.Value.ToString("yyyyMMdd");
@@ -231,7 +232,6 @@ namespace WindowsFormsApp1
             if (Valid())
             {
                 // Get the response.
-                lbl_ThongBao.Text = "";
                 try
                 {
                     WebResponse response = request.GetResponse();

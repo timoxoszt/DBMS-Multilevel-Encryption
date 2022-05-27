@@ -13,6 +13,8 @@ using System.Web;
 using System.IO;
 using System.Net.Http.Formatting;
 using System.Net;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace WindowsFormsApp1
 {
@@ -36,8 +38,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             InitializeMyControl();
-
-
         }
         private void InitializeMyControl()
         {
@@ -45,6 +45,49 @@ namespace WindowsFormsApp1
             txt_MatKhau.Text = "";
             // The password character is an asterisk.
             txt_MatKhau.PasswordChar = '*';
+        }
+        public static bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            try
+            {
+                // Normalize the domain
+                email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
+                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
+                // Examines the domain part of the email and normalizes it.
+                string DomainMapper(Match match)
+                {
+                    // Use IdnMapping class to convert Unicode domain names.
+                    var idn = new IdnMapping();
+
+                    // Pull out and process domain name (throws ArgumentException on invalid)
+                    string domainName = idn.GetAscii(match.Groups[2].Value);
+
+                    return match.Groups[1].Value + domainName;
+                }
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+
+            try
+            {
+                return Regex.IsMatch(email,
+                    @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                    RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
         }
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
@@ -54,58 +97,68 @@ namespace WindowsFormsApp1
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            // Create a request using a URL that can receive a post.
-            WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/login");
-            // Set the Method property of the request to POST.
-            request.Method = "POST";
-            // Create POST data and convert it to a byte array.
-            string postData = "email=longdx@gmail.com" + txt_Email.Text + "&password=9=HE=MQz9VvWLvcw*sX" + txt_MatKhau.Text;
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-
-            // Set the ContentType property of the WebRequest.
-            request.ContentType = "application/x-www-form-urlencoded";
-            // Set the ContentLength property of the WebRequest.
-            request.ContentLength = byteArray.Length;
-
-            // Get the request stream.
-            Stream dataStream = request.GetRequestStream();
-            // Write the data to the request stream.
-            dataStream.Write(byteArray, 0, byteArray.Length);
-            // Close the Stream object.
-            dataStream.Close();
-
-            try
+            if (IsValidEmail(txt_Email.Text))
             {
-                lbl_ThongBao.Text = "";
-                // Get the response.
-                WebResponse response = request.GetResponse();
-                // Display the status.
-                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+                // Create a request using a URL that can receive a post.
+                WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/login");
+                // Set the Method property of the request to POST.
+                request.Method = "POST";
+                // Create POST data and convert it to a byte array.
+                string postData = "email=" + txt_Email.Text + "&password=" + txt_MatKhau.Text;
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
-                Root datajson = null;
-                // Get the stream containing content returned by the server.
-                // The using block ensures the stream is automatically closed.
-                using (dataStream = response.GetResponseStream())
+                // Set the ContentType property of the WebRequest.
+                request.ContentType = "application/x-www-form-urlencoded";
+                // Set the ContentLength property of the WebRequest.
+                request.ContentLength = byteArray.Length;
+
+                // Get the request stream.
+                Stream dataStream = request.GetRequestStream();
+                // Write the data to the request stream.
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                // Close the Stream object.
+                dataStream.Close();
+
+                try
                 {
-                    // Open the stream using a StreamReader for easy access.
-                    StreamReader reader = new StreamReader(dataStream);
-                    // Read the content.
-                    string responseFromServer = reader.ReadToEnd();
-                    // Display the content.
-                    datajson = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(responseFromServer);
-                    this.Hide();
-                    token = datajson.data.token;
-                    Menu p = new Menu();
-                    p.ShowDialog();
-                    this.Show();
+                    lbl_ThongBao.Text = "";
+                    // Get the response.
+                    WebResponse response = request.GetResponse();
+                    // Display the status.
+                    Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+
+                    Root datajson = null;
+                    // Get the stream containing content returned by the server.
+                    // The using block ensures the stream is automatically closed.
+                    using (dataStream = response.GetResponseStream())
+                    {
+                        // Open the stream using a StreamReader for easy access.
+                        StreamReader reader = new StreamReader(dataStream);
+                        // Read the content.
+                        string responseFromServer = reader.ReadToEnd();
+                        // Display the content.
+                        datajson = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(responseFromServer);
+                        this.Hide();
+                        token = datajson.data.token;
+                        Menu p = new Menu();
+                        p.ShowDialog();
+                        this.Show();
+                    }
+                    // Close the response.
+                    response.Close();
                 }
-                // Close the response.
-                response.Close();
+                catch (Exception)
+                {
+                    lbl_ThongBao.Text = "Đăng nhập không thành công.";
+                }
             }
-            catch (Exception)
-            {
-                lbl_ThongBao.Text = "Đăng nhập không thành công.";
-            }
+            else lbl_ThongBao.Text = "Email không hợp lệ.";
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txt_Email.Text = "longdx@gmail.com";
+            txt_MatKhau.Text = "9=HE=MQz9VvWLvcw*sX";
         }
     }
 }
