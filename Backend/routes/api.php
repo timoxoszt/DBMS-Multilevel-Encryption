@@ -25,6 +25,7 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::resource('products', ProductController::class);
     Route::resource('orders', OrderController::class);
     Route::get('/profile', [UserController::class, 'profile']);
+    Route::put('/update-profile', [UserController::class, 'updatemyprofile']);
     Route::get('/my-bills', [OrderController::class, 'mybills']);
     Route::post('/logout', [AuthController::class, 'signout']);
 });
