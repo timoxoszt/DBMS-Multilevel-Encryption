@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
             // Set the Method property of the request to POST.
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
-            string postData = "email=onlytien2002@gmail.com" + txt_Email.Text + "&password=12345678" + txt_MatKhau.Text;
+            string postData = "email=longdx@gmail.com" + txt_Email.Text + "&password=9=HE=MQz9VvWLvcw*sX" + txt_MatKhau.Text;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
             // Set the ContentType property of the WebRequest.

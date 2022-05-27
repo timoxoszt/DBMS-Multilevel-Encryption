@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using System.Net;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace WindowsFormsApp1
 {
@@ -42,25 +43,51 @@ namespace WindowsFormsApp1
             txt_XNMatKhau.Text = "";
             txt_XNMatKhau.PasswordChar = '*';
         }
-        private bool check = false;
+        private int check = 0;
+        int count = 0;
         private static bool isValidName(String str)
         {
             return Regex.IsMatch(str, @"^[a-zA-Z' ']+$");
         }
-        private bool IsValidEmail(string email)
+        public static bool IsValidEmail(string email)
         {
-            var trimmedEmail = email.Trim();
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
 
-            if (trimmedEmail.EndsWith("."))
-            {
-                return false; // suggested by @TK-421
-            }
             try
             {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == trimmedEmail;
+                // Normalize the domain
+                email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
+                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
+                // Examines the domain part of the email and normalizes it.
+                string DomainMapper(Match match)
+                {
+                    // Use IdnMapping class to convert Unicode domain names.
+                    var idn = new IdnMapping();
+
+                    // Pull out and process domain name (throws ArgumentException on invalid)
+                    string domainName = idn.GetAscii(match.Groups[2].Value);
+
+                    return match.Groups[1].Value + domainName;
+                }
             }
-            catch
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+
+            try
+            {
+                return Regex.IsMatch(email,
+                    @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                    RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+            }
+            catch (RegexMatchTimeoutException)
             {
                 return false;
             }
@@ -68,97 +95,117 @@ namespace WindowsFormsApp1
 
         private bool Valid()
         {
+            check = 0;
             if (IsValidEmail(txt_Email.Text)
                     && txt_Email.Text.Length <= 40
                     && txt_Email.Text.Length >= 11)
             {
                 lb_EC.Text = "";
-                check = true;
+                ++check;
             }
             else
             {
                 lb_EC.Text = "Không hợp lệ";
-                check = false;
+                --check;
             }
 
             if (txt_MatKhau.Text.Length >= 8)
             {
                 lb_PC.Text = "";
-                check = true;
+                ++check;
             }
             else
             {
                 lb_PC.Text = "Không hợp lệ";
-                check = false;
+                --check;
             }
 
             if (txt_MatKhau.Text == txt_XNMatKhau.Text)
             {
-                check = true;
+                ++check;
                 lb_CPC.Text = "";
             }
             else
             {
-                check = false;
+                --check;
                 lb_CPC.Text = "Mật khẩu xác nhận không giống.";
             }
 
             if (isValidName(txt_HoVaTen.Text))
             {
-                check = true;
+                ++check;
                 lb_NC.Text = "";
             }
             else
             {
-                check = false;
+                --check;
                 lb_NC.Text = "Không hợp lệ";
             }
 
             if (txt_SDT.Text.Length >= 10 && txt_SDT.Text.Length <= 11)
             {
-                check = true;
+                ++check;
                 lb_PNC.Text = "";
             }
             else
             {
-                check = false;
+                --check;
                 lb_PNC.Text = "Không hợp lệ";
             }
 
             if (txt_SoChungMinh.Text.Length > 8 && txt_SoChungMinh.Text.Length <= 20)
             {
-                check = true;
+                ++check;
                 lb_SCMC.Text = "";
             }
             else
             {
-                check = false;
+                --check;
                 lb_SCMC.Text = "Không hợp lệ";
             }
-            if (check)
+
+            if (txt_STK.Text.Length > 9 && txt_STK.Text.Length <= 20)
             {
-                if (txt_STK.Text.Length > 9 && txt_STK.Text.Length <= 20)
-                    lb_STKC.Text = "";
-                else
-                {
-                    check = false;
-                    lb_STKC.Text = "Không hợp lệ";
-                }
+                lb_STKC.Text = "";
+                ++check;
             }
-            else check = false;
-            return check;
+            else
+            {
+                --check;
+                lb_STKC.Text = "Không hợp lệ";
+            }
+            DateTimePicker dtJoin = new DateTimePicker();
+            dtJoin.Value = DateTime.Now;
+            DateTimePicker dtBDay = new DateTimePicker();
+            dtBDay.Value = dateTimePicker1.Value;
+            if (dtBDay.Value >= dtJoin.Value)
+            {
+                lb_BC.Text = "Không hợp lệ";
+                --check;
+            }
+            else
+            {
+                ++check;
+                lb_BC.Text = "";
+            }
+            if (check == 8) return true;
+            else return false;
         }
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
+            count++;
+            if(count == 4)
+            {
+                count = 0;
+                MessageBox.Show("Đăng kí không thành công quá 3 lần, chương trình sẽ tự động đóng lại.");
+                this.Close();
+            }
             string selectDateAsString = dateTimePicker1.Value.ToString("yyyyMMdd");
-
             // Create a request using a URL that can receive a post.
             WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/register");
             // Set the Method property of the request to POST.
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
-
-
             string postData = "email=" + txt_Email.Text
                         + "&password=" + txt_MatKhau.Text
                         + "&confirm_password=" + txt_XNMatKhau.Text
@@ -167,7 +214,7 @@ namespace WindowsFormsApp1
                         + "&stk=" + txt_STK.Text
                         + "&cmnd=" + txt_SoChungMinh.Text
                         + "&dia_chi=" + txt_DiaChi.Text
-                        + "&ngay_sinh=2022/05/23" + selectDateAsString;
+                        + "&ngay_sinh=" + selectDateAsString;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
             // Set the ContentType property of the WebRequest.
@@ -183,8 +230,8 @@ namespace WindowsFormsApp1
             dataStream.Close();
             if (Valid())
             {
-                lbl_ThongBao.Text = "";
                 // Get the response.
+                lbl_ThongBao.Text = "";
                 try
                 {
                     WebResponse response = request.GetResponse();
@@ -200,25 +247,33 @@ namespace WindowsFormsApp1
                         string responseFromServer = reader.ReadToEnd();
                         // Display the content.
                         datajson = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(responseFromServer);
-
+                        count++;
                         lbl_ThongBao.Text = "Đăng kí thành công.";
-                        MessageBox.Show(datajson.data.ToString());
+                        btn_DangKy.FlatStyle = FlatStyle.Flat;
+                        btn_DangKy.FlatAppearance.BorderColor = BackColor;
+                        btn_DangKy.FlatAppearance.MouseOverBackColor = BackColor;
+                        btn_DangKy.FlatAppearance.MouseDownBackColor = BackColor;
+                        btn_DangKy.Enabled = false;
+
                     }
                     // Close the response.
                     response.Close();
                 }
-                catch (Exception) { lbl_ThongBao.Text = "Không thể kết nối đến server."; }
+                catch (Exception)
+                {
+                    lbl_ThongBao.Text = "Email đã tồn tại."; 
+                }
             }
         }
         private void Create_An_Accout_Load(object sender, EventArgs e)
         {
             txt_SoChungMinh.Text = "968573921";
             txt_HoVaTen.Text = "Do Xuan Long";
-            txt_Email.Text = "long@gmail.co";
+            txt_Email.Text = "long234234@gmail.com";
             txt_DiaChi.Text = "80/3 dia chi";
             txt_MatKhau.Text = "12345678";
             txt_SDT.Text = "0987677899";
-            txt_STK.Text = "238475843573394";
+            txt_STK.Text = "23847584357334";
             txt_XNMatKhau.Text = "12345678";
         }
     }
