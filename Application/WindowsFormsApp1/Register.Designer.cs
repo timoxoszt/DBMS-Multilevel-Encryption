@@ -48,6 +48,15 @@
             this.lbl_ThongBao = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_XNMatKhau = new System.Windows.Forms.TextBox();
+            this.lb_EC = new System.Windows.Forms.Label();
+            this.lb_CPC = new System.Windows.Forms.Label();
+            this.lb_NC = new System.Windows.Forms.Label();
+            this.lb_PNC = new System.Windows.Forms.Label();
+            this.lb_STKC = new System.Windows.Forms.Label();
+            this.lb_SCMC = new System.Windows.Forms.Label();
+            this.lb_AC = new System.Windows.Forms.Label();
+            this.lb_BC = new System.Windows.Forms.Label();
+            this.lb_PC = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -107,7 +116,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(126, 354);
+            this.label7.Location = new System.Drawing.Point(126, 353);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 16);
             this.label7.TabIndex = 6;
@@ -214,12 +223,102 @@
             this.txt_XNMatKhau.Size = new System.Drawing.Size(254, 22);
             this.txt_XNMatKhau.TabIndex = 20;
             // 
+            // lb_EC
+            // 
+            this.lb_EC.AutoSize = true;
+            this.lb_EC.ForeColor = System.Drawing.Color.Red;
+            this.lb_EC.Location = new System.Drawing.Point(534, 38);
+            this.lb_EC.Name = "lb_EC";
+            this.lb_EC.Size = new System.Drawing.Size(0, 16);
+            this.lb_EC.TabIndex = 21;
+            // 
+            // lb_CPC
+            // 
+            this.lb_CPC.AutoSize = true;
+            this.lb_CPC.ForeColor = System.Drawing.Color.Red;
+            this.lb_CPC.Location = new System.Drawing.Point(534, 109);
+            this.lb_CPC.Name = "lb_CPC";
+            this.lb_CPC.Size = new System.Drawing.Size(0, 16);
+            this.lb_CPC.TabIndex = 22;
+            // 
+            // lb_NC
+            // 
+            this.lb_NC.AutoSize = true;
+            this.lb_NC.ForeColor = System.Drawing.Color.Red;
+            this.lb_NC.Location = new System.Drawing.Point(534, 138);
+            this.lb_NC.Name = "lb_NC";
+            this.lb_NC.Size = new System.Drawing.Size(0, 16);
+            this.lb_NC.TabIndex = 23;
+            // 
+            // lb_PNC
+            // 
+            this.lb_PNC.AutoSize = true;
+            this.lb_PNC.ForeColor = System.Drawing.Color.Red;
+            this.lb_PNC.Location = new System.Drawing.Point(534, 175);
+            this.lb_PNC.Name = "lb_PNC";
+            this.lb_PNC.Size = new System.Drawing.Size(0, 16);
+            this.lb_PNC.TabIndex = 24;
+            // 
+            // lb_STKC
+            // 
+            this.lb_STKC.AutoSize = true;
+            this.lb_STKC.ForeColor = System.Drawing.Color.Red;
+            this.lb_STKC.Location = new System.Drawing.Point(534, 222);
+            this.lb_STKC.Name = "lb_STKC";
+            this.lb_STKC.Size = new System.Drawing.Size(0, 16);
+            this.lb_STKC.TabIndex = 25;
+            // 
+            // lb_SCMC
+            // 
+            this.lb_SCMC.AutoSize = true;
+            this.lb_SCMC.ForeColor = System.Drawing.Color.Red;
+            this.lb_SCMC.Location = new System.Drawing.Point(534, 260);
+            this.lb_SCMC.Name = "lb_SCMC";
+            this.lb_SCMC.Size = new System.Drawing.Size(0, 16);
+            this.lb_SCMC.TabIndex = 26;
+            // 
+            // lb_AC
+            // 
+            this.lb_AC.AutoSize = true;
+            this.lb_AC.ForeColor = System.Drawing.Color.Red;
+            this.lb_AC.Location = new System.Drawing.Point(534, 301);
+            this.lb_AC.Name = "lb_AC";
+            this.lb_AC.Size = new System.Drawing.Size(0, 16);
+            this.lb_AC.TabIndex = 27;
+            // 
+            // lb_BC
+            // 
+            this.lb_BC.AutoSize = true;
+            this.lb_BC.ForeColor = System.Drawing.Color.Red;
+            this.lb_BC.Location = new System.Drawing.Point(534, 353);
+            this.lb_BC.Name = "lb_BC";
+            this.lb_BC.Size = new System.Drawing.Size(0, 16);
+            this.lb_BC.TabIndex = 28;
+            // 
+            // lb_PC
+            // 
+            this.lb_PC.AutoSize = true;
+            this.lb_PC.ForeColor = System.Drawing.Color.Red;
+            this.lb_PC.Location = new System.Drawing.Point(534, 80);
+            this.lb_PC.Name = "lb_PC";
+            this.lb_PC.Size = new System.Drawing.Size(0, 16);
+            this.lb_PC.TabIndex = 29;
+            // 
             // Create_An_Accout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(687, 486);
+            this.Controls.Add(this.lb_PC);
+            this.Controls.Add(this.lb_BC);
+            this.Controls.Add(this.lb_AC);
+            this.Controls.Add(this.lb_SCMC);
+            this.Controls.Add(this.lb_STKC);
+            this.Controls.Add(this.lb_PNC);
+            this.Controls.Add(this.lb_NC);
+            this.Controls.Add(this.lb_CPC);
+            this.Controls.Add(this.lb_EC);
             this.Controls.Add(this.txt_XNMatKhau);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lbl_ThongBao);
@@ -242,6 +341,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Create_An_Accout";
             this.Text = "Tạo Tài Khoản";
+            this.Load += new System.EventHandler(this.Create_An_Accout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +369,14 @@
         private System.Windows.Forms.Label lbl_ThongBao;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_XNMatKhau;
+        private System.Windows.Forms.Label lb_EC;
+        private System.Windows.Forms.Label lb_CPC;
+        private System.Windows.Forms.Label lb_NC;
+        private System.Windows.Forms.Label lb_PNC;
+        private System.Windows.Forms.Label lb_STKC;
+        private System.Windows.Forms.Label lb_SCMC;
+        private System.Windows.Forms.Label lb_AC;
+        private System.Windows.Forms.Label lb_BC;
+        private System.Windows.Forms.Label lb_PC;
     }
 }
