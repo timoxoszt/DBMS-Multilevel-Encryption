@@ -16,12 +16,12 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('uuid')->unique();
-            $table->string('ho_ten');
-            $table->string('sdt', 15);
-            $table->string('cmnd', 30);
-            $table->string('dia_chi', 100);
-            $table->string('stk', 20);
-            $table->date('ngay_sinh'); // YYYY-MM-DD
+            $table->longText('ho_ten');
+            $table->longText('sdt');
+            $table->longText('cmnd');
+            $table->longText('dia_chi');
+            $table->longText('stk');
+            $table->longText('ngay_sinh'); // YYYY-MM-DD
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
