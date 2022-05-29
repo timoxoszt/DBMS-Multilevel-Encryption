@@ -14,3 +14,4 @@ yarn-error.log
 /.vscode
 /db_data
 /storage/app/public
+/.vs
