@@ -80,9 +80,39 @@ class UserController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $uuid)
     {
-        //
+        $user = User::where('uuid', $uuid)->first();
+        if (is_null($user)) {
+            return $this->sendError('User does not exist.');
+        }
+        $input = $request->all();
+        $validator = Validator::make($input, [
+            'email' => 'required|string',
+            'ho_ten' => 'required|string',
+            'sdt' => 'required',
+            'dia_chi' => 'required',
+            'stk' => 'required',
+            'cmnd' => 'required',
+            'ngay_sinh' => 'required',
+        ]);
+        if($validator->fails()){
+            return $this->sendError($validator->errors());       
+        }
+        try{           
+            $user->ho_ten = Crypt::encryptString($input['ho_ten']);
+            $user->email = $input['email'];
+            $user->sdt = Crypt::encryptString($input['sdt']);
+            $user->dia_chi = Crypt::encryptString($input['dia_chi']);
+            $user->stk = Crypt::encryptString($input['stk']);
+            $user->cmnd = Crypt::encryptString($input['cmnd']);
+            $user->ngay_sinh = Crypt::encryptString($input['ngay_sinh']);
+            $user->save();
+
+            return $this->sendResponse(new UserResource($user), 'User updated.');
+        }catch(\Exception $e){
+            return $this->sendError('Permission denied.');
+        }
     }
 
     /**
@@ -123,6 +153,11 @@ class UserController extends BaseController
         $validator = Validator::make($input, [
             'email' => 'required|string',
             'ho_ten' => 'required|string',
+            'sdt' => 'required',
+            'dia_chi' => 'required',
+            'stk' => 'required',
+            'cmnd' => 'required',
+            'ngay_sinh' => 'required',
         ]);
         if($validator->fails()){
             return $this->sendError($validator->errors());       

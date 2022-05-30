@@ -16,7 +16,6 @@ class User extends JsonResource
      */
     public function toArray($request)
     {
-        // return parent::toArray($request);
         return [
             'uuid' => $this->uuid,
             'ho_ten' => Crypt::decryptString($this->ho_ten),
