@@ -44,7 +44,25 @@ class ProductController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(),[
+            'ten_sp' => 'required|string',
+            'ma_sp' => 'required|string|max:10',            
+            'dvt' => 'required|string|max:20',            
+            'gia' => 'required|integer',            
+        ]);
+
+        if($validator->fails()){
+            return $this->sendError('Create product failed.', ['error'=>'Check your input.']);   
+        } 
+
+        $product = Product::create([
+            'ten_sp' => $request->ten_sp,             
+            'dvt' => $request->dvt,
+            'ma_sp' => $request->ma_sp,   
+            'gia' => $request->gia,   
+        ]);           
+        
+        return $this->sendResponse(new ProductResource($product), 'Created product.');
     }
 
     /**
