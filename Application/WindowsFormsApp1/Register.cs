@@ -101,78 +101,78 @@ namespace WindowsFormsApp1
                     && txt_Email.Text.Length >= 11)
             {
                 lb_EC.Text = "";
-                ++check;
+               // ++check;
             }
             else
             {
-                lb_EC.Text = "Không hợp lệ";
-                --check;
+                lb_EC.Text = "Email không hợp lệ";
+                check--;
             }
 
             if (txt_MatKhau.Text.Length >= 8)
             {
                 lb_PC.Text = "";
-                ++check;
+               // ++check;
             }
             else
             {
-                lb_PC.Text = "Không hợp lệ";
-                --check;
+                lb_PC.Text = "Phải nhập mật khẩu từ 8 kí tự trở lên";
+                check--;
             }
 
             if (txt_MatKhau.Text == txt_XNMatKhau.Text)
             {
-                ++check;
+               // ++check;
                 lb_CPC.Text = "";
             }
             else
             {
-                --check;
+                check--;
                 lb_CPC.Text = "Mật khẩu xác nhận không giống.";
             }
 
             if (isValidName(txt_HoVaTen.Text))
             {
-                ++check;
+               // ++check;
                 lb_NC.Text = "";
             }
             else
             {
-                --check;
-                lb_NC.Text = "Không hợp lệ";
+                check--;
+                lb_NC.Text = "Họ và tên không hợp lệ";
             }
 
             if (txt_SDT.Text.Length >= 10 && txt_SDT.Text.Length <= 11)
             {
-                ++check;
+              //  ++check;
                 lb_PNC.Text = "";
             }
             else
             {
-                --check;
-                lb_PNC.Text = "Không hợp lệ";
+                check--;
+                lb_PNC.Text = "Số điện thoại không hợp lệ";
             }
 
             if (txt_SoChungMinh.Text.Length > 8 && txt_SoChungMinh.Text.Length <= 20)
             {
-                ++check;
+              //  ++check;
                 lb_SCMC.Text = "";
             }
             else
             {
-                --check;
-                lb_SCMC.Text = "Không hợp lệ";
+                check--;
+                lb_SCMC.Text = "Số chứng minh không hợp lệ";
             }
 
             if (txt_STK.Text.Length > 9 && txt_STK.Text.Length <= 20)
             {
                 lb_STKC.Text = "";
-                ++check;
+               // ++check;
             }
             else
             {
-                --check;
-                lb_STKC.Text = "Không hợp lệ";
+                check--;
+                lb_STKC.Text = "Số tài khoản không hợp lệ";
             }
             DateTimePicker dtJoin = new DateTimePicker();
             dtJoin.Value = DateTime.Now;
@@ -180,15 +180,15 @@ namespace WindowsFormsApp1
             dtBDay.Value = dateTimePicker1.Value;
             if (dtBDay.Value >= dtJoin.Value)
             {
-                lb_BC.Text = "Không hợp lệ";
-                --check;
+                lb_BC.Text = "Ngày sinh không hợp lệ";
+                check--;
             }
             else
             {
-                ++check;
+              //  ++check;
                 lb_BC.Text = "";
             }
-            if (check == 8) return true;
+            if (check == 0) return true;
             else return false;
         }
         private void btn_DangKy_Click(object sender, EventArgs e)
@@ -264,6 +264,8 @@ namespace WindowsFormsApp1
                     lbl_ThongBao.Text = "Email đã tồn tại."; 
                 }
             }
+            else 
+                lbl_ThongBao.Text = "Đăng kí không thành công.";
         }
         private void Create_An_Accout_Load(object sender, EventArgs e)
         {
