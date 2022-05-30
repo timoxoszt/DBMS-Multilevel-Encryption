@@ -131,7 +131,8 @@ namespace WindowsFormsApp1
                 lb_CPC.Text = "Mật khẩu xác nhận không giống.";
             }
 
-            if (isValidName(txt_HoVaTen.Text))
+            //if (isValidName(txt_HoVaTen.Text))
+                if(txt_HoVaTen.Text != "")
             {
                // ++check;
                 lb_NC.Text = "";
@@ -201,36 +202,37 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Đăng kí không thành công quá 3 lần, chương trình sẽ tự động đóng lại.", "Thông báo");
                 this.Close();
             }
-            string selectDateAsString = dateTimePicker1.Value.ToString("yyyyMMdd");
-            // Create a request using a URL that can receive a post.
-            WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/register");
-            // Set the Method property of the request to POST.
-            request.Method = "POST";
-            // Create POST data and convert it to a byte array.
-            string postData = "email=" + txt_Email.Text
-                        + "&password=" + txt_MatKhau.Text
-                        + "&confirm_password=" + txt_XNMatKhau.Text
-                        + "&ho_ten=" + txt_HoVaTen.Text
-                        + "&sdt=" + txt_SDT.Text
-                        + "&stk=" + txt_STK.Text
-                        + "&cmnd=" + txt_SoChungMinh.Text
-                        + "&dia_chi=" + txt_DiaChi.Text
-                        + "&ngay_sinh=" + selectDateAsString;
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-
-            // Set the ContentType property of the WebRequest.
-            request.ContentType = "application/x-www-form-urlencoded";
-            // Set the ContentLength property of the WebRequest.
-            request.ContentLength = byteArray.Length;
-
-            // Get the request stream.
-            Stream dataStream = request.GetRequestStream();
-            // Write the data to the request stream.
-            dataStream.Write(byteArray, 0, byteArray.Length);
-            // Close the Stream object.
-            dataStream.Close();
             if (Valid())
             {
+                string selectDateAsString = dateTimePicker1.Value.ToString("yyyyMMdd");
+                // Create a request using a URL that can receive a post.
+                WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/register");
+                // Set the Method property of the request to POST.
+                request.Method = "POST";
+                // Create POST data and convert it to a byte array.
+                string postData = "email=" + txt_Email.Text
+                            + "&password=" + txt_MatKhau.Text
+                            + "&confirm_password=" + txt_XNMatKhau.Text
+                            + "&ho_ten=" + txt_HoVaTen.Text
+                            + "&sdt=" + txt_SDT.Text
+                            + "&stk=" + txt_STK.Text
+                            + "&cmnd=" + txt_SoChungMinh.Text
+                            + "&dia_chi=" + txt_DiaChi.Text
+                            + "&ngay_sinh=" + selectDateAsString;
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+
+                // Set the ContentType property of the WebRequest.
+                request.ContentType = "application/x-www-form-urlencoded";
+                // Set the ContentLength property of the WebRequest.
+                request.ContentLength = byteArray.Length;
+
+                // Get the request stream.
+                Stream dataStream = request.GetRequestStream();
+                // Write the data to the request stream.
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                // Close the Stream object.
+                dataStream.Close();
+            
                 // Get the response.
                 try
                 {
