@@ -109,8 +109,19 @@ class ProductController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($ma_sp)
     {
-        //
+        $product = Product::where('ma_sp', $ma_sp)->first();
+
+        if (is_null($product)) {
+            return $this->sendError('Product does not exist.');
+        }
+        try{
+            $product->delete();
+            return $this->sendResponse([], 'Product deleted.');
+        }          
+        catch(\Exception $e){
+            return $this->sendError('Unauthorised.');
+        }      
     }
 }
