@@ -46,7 +46,22 @@ class OrderController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(),[
+            'so_luong' => 'required|integer',
+            'ma_sp' => 'required|string|max:10',            
+        ]);
+
+        if($validator->fails()){
+            return $this->sendError('Create order failed.', ['error'=>'Check your input.']);   
+        }
+        $user = Auth::user(); 
+        $order = Order::create([
+            'user_id' => $user->id,             
+            'so_luong' => $request->so_luong,
+            'ma_sp' => $request->ma_sp,   
+        ]);           
+        
+        return $this->sendResponse(new OrderResource($order), 'Created order.');
     }
 
     /**
