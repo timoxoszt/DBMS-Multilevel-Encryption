@@ -88,6 +88,7 @@
             this.txt_NgaySinh.Location = new System.Drawing.Point(314, 439);
             this.txt_NgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NgaySinh.Name = "txt_NgaySinh";
+            this.txt_NgaySinh.ReadOnly = true;
             this.txt_NgaySinh.Size = new System.Drawing.Size(276, 25);
             this.txt_NgaySinh.TabIndex = 49;
             // 

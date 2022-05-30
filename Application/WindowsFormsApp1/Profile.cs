@@ -156,7 +156,7 @@ namespace WindowsFormsApp1
                 lb_STKC.Text = "Số tài khoản không hợp lệ";
             }
             DateTimePicker dtBDay = new DateTimePicker();
-            if(count == 1) dtBDay.Value = dateTimePicker2.Value;
+            if(count >= 1) dtBDay.Value = dateTimePicker2.Value;
             else dtBDay.Value = DateTime.ParseExact(txt_NgaySinh.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
             DateTimePicker dtJoin = new DateTimePicker();
             dtJoin.Value = DateTime.ParseExact(txt_NgayDangKy.Text,"dd/MM/yyyy", CultureInfo.InvariantCulture);
@@ -212,9 +212,11 @@ namespace WindowsFormsApp1
             count = 0;
             if(Valid())
             {
-                string ns = dateTimePicker2.Value.ToString("yyyy/MM/dd");
+                DateTime dateTime = DateTime.Parse(txt_NgaySinh.Text);
+                string ns = dateTime.ToString("yyyy/MM/dd");
                 WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/update-profile");
                 request.Headers["Authorization"] = "Bearer " + Login.token;
+                
                 request.PreAuthenticate = true;
                 request.Method = "PUT";
                 string postData = "ho_ten=" + txt_HoVaTen.Text

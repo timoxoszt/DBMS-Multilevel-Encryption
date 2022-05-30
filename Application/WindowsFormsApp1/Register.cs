@@ -44,7 +44,6 @@ namespace WindowsFormsApp1
             txt_XNMatKhau.PasswordChar = '*';
         }
         private int check = 0;
-        int count = 0;
         private static bool isValidName(String str)
         {
             return Regex.IsMatch(str, @"^[a-zA-Z' ']+$");
@@ -195,13 +194,6 @@ namespace WindowsFormsApp1
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             lbl_ThongBao.Text = "";
-            count++;
-            if(count == 4)
-            {
-                count = 0;
-                MessageBox.Show("Đăng kí không thành công quá 3 lần, chương trình sẽ tự động đóng lại.", "Thông báo");
-                this.Close();
-            }
             if (Valid())
             {
                 string selectDateAsString = dateTimePicker1.Value.ToString("yyyyMMdd");
@@ -249,7 +241,6 @@ namespace WindowsFormsApp1
                         string responseFromServer = reader.ReadToEnd();
                         // Display the content.
                         datajson = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(responseFromServer);
-                        count++;
                         lbl_ThongBao.Text = "Đăng kí thành công.";
                         btn_DangKy.FlatStyle = FlatStyle.Flat;
                         btn_DangKy.FlatAppearance.BorderColor = BackColor;
@@ -265,6 +256,7 @@ namespace WindowsFormsApp1
                 {
                     lbl_ThongBao.Text = "Email đã tồn tại."; 
                 }
+                request.Abort();
             }
             else 
                 lbl_ThongBao.Text = "Đăng kí không thành công.";

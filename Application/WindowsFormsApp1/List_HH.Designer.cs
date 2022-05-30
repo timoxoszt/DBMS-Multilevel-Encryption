@@ -30,7 +30,6 @@
         {
             this.LV_Data = new System.Windows.Forms.ListView();
             this.btn_Del = new System.Windows.Forms.Button();
-            this.btn_Create = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.txt_DVT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,7 +68,7 @@
             // 
             this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Del.Location = new System.Drawing.Point(317, 581);
+            this.btn_Del.Location = new System.Drawing.Point(249, 581);
             this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(108, 39);
@@ -77,23 +76,11 @@
             this.btn_Del.Text = "Xóa";
             this.btn_Del.UseVisualStyleBackColor = true;
             // 
-            // btn_Create
-            // 
-            this.btn_Create.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Create.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Create.Location = new System.Drawing.Point(16, 581);
-            this.btn_Create.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(108, 39);
-            this.btn_Create.TabIndex = 24;
-            this.btn_Create.Text = "Tạo Mới";
-            this.btn_Create.UseVisualStyleBackColor = true;
-            // 
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Save.Location = new System.Drawing.Point(172, 581);
+            this.btn_Save.Location = new System.Drawing.Point(86, 581);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(108, 39);
@@ -198,7 +185,6 @@
             this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.Controls.Add(this.Image);
             this.panel1.Controls.Add(this.btn_Del);
-            this.panel1.Controls.Add(this.btn_Create);
             this.panel1.Controls.Add(this.btn_Save);
             this.panel1.Controls.Add(this.txt_DVT);
             this.panel1.Controls.Add(this.label5);
@@ -245,7 +231,6 @@
 
         private System.Windows.Forms.ListView LV_Data;
         private System.Windows.Forms.Button btn_Del;
-        private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.TextBox txt_DVT;
         private System.Windows.Forms.Label label5;

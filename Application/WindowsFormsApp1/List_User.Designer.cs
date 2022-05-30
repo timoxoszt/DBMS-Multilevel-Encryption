@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btn_Del = new System.Windows.Forms.Button();
-            this.btn_Create = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.txt_STK = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.LV_Data = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,37 +56,27 @@
             // 
             this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Del.Location = new System.Drawing.Point(322, 557);
+            this.btn_Del.Location = new System.Drawing.Point(189, 557);
             this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(108, 39);
             this.btn_Del.TabIndex = 25;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.UseVisualStyleBackColor = true;
-            // 
-            // btn_Create
-            // 
-            this.btn_Create.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Create.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Create.Location = new System.Drawing.Point(31, 557);
-            this.btn_Create.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(108, 39);
-            this.btn_Create.TabIndex = 24;
-            this.btn_Create.Text = "Tạo Mới";
-            this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Save.Location = new System.Drawing.Point(174, 557);
+            this.btn_Save.Location = new System.Drawing.Point(73, 557);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(108, 39);
             this.btn_Save.TabIndex = 23;
             this.btn_Save.Text = "Cập Nhật";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // txt_STK
             // 
@@ -137,6 +127,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txt_NDK);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txt_Birth);
@@ -148,7 +139,6 @@
             this.panel1.Controls.Add(this.txt_SDT);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_Del);
-            this.panel1.Controls.Add(this.btn_Create);
             this.panel1.Controls.Add(this.btn_Save);
             this.panel1.Controls.Add(this.txt_STK);
             this.panel1.Controls.Add(this.label5);
@@ -171,6 +161,7 @@
             this.txt_NDK.Location = new System.Drawing.Point(152, 398);
             this.txt_NDK.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NDK.Name = "txt_NDK";
+            this.txt_NDK.ReadOnly = true;
             this.txt_NDK.Size = new System.Drawing.Size(276, 25);
             this.txt_NDK.TabIndex = 35;
             // 
@@ -315,6 +306,18 @@
             this.LV_Data.View = System.Windows.Forms.View.Details;
             this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Maroon;
+            this.button1.Location = new System.Drawing.Point(304, 557);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 39);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // List_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,7 +336,6 @@
 
         #endregion
         private System.Windows.Forms.Button btn_Del;
-        private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.TextBox txt_STK;
         private System.Windows.Forms.Label label5;
@@ -353,5 +355,6 @@
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView LV_Data;
+        private System.Windows.Forms.Button button1;
     }
 }
