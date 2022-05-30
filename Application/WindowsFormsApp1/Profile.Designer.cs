@@ -45,6 +45,15 @@
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_CapNhat = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.lb_NC = new System.Windows.Forms.Label();
+            this.lb_EC = new System.Windows.Forms.Label();
+            this.lb_STKC = new System.Windows.Forms.Label();
+            this.lb_PNC = new System.Windows.Forms.Label();
+            this.lb_SCMC = new System.Windows.Forms.Label();
+            this.lb_AC = new System.Windows.Forms.Label();
+            this.lb_BC = new System.Windows.Forms.Label();
+            this.lbl_ThongBao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_NgayDangKy
@@ -55,6 +64,7 @@
             this.txt_NgayDangKy.Location = new System.Drawing.Point(314, 505);
             this.txt_NgayDangKy.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NgayDangKy.Name = "txt_NgayDangKy";
+            this.txt_NgayDangKy.ReadOnly = true;
             this.txt_NgayDangKy.Size = new System.Drawing.Size(276, 25);
             this.txt_NgayDangKy.TabIndex = 51;
             // 
@@ -235,7 +245,7 @@
             // 
             this.btn_CapNhat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CapNhat.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_CapNhat.Location = new System.Drawing.Point(376, 575);
+            this.btn_CapNhat.Location = new System.Drawing.Point(328, 557);
             this.btn_CapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.Size = new System.Drawing.Size(108, 39);
@@ -244,12 +254,110 @@
             this.btn_CapNhat.UseVisualStyleBackColor = true;
             this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(597, 440);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(22, 24);
+            this.dateTimePicker2.TabIndex = 54;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // lb_NC
+            // 
+            this.lb_NC.AutoSize = true;
+            this.lb_NC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_NC.ForeColor = System.Drawing.Color.Red;
+            this.lb_NC.Location = new System.Drawing.Point(644, 33);
+            this.lb_NC.Name = "lb_NC";
+            this.lb_NC.Size = new System.Drawing.Size(0, 18);
+            this.lb_NC.TabIndex = 56;
+            // 
+            // lb_EC
+            // 
+            this.lb_EC.AutoSize = true;
+            this.lb_EC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_EC.ForeColor = System.Drawing.Color.Red;
+            this.lb_EC.Location = new System.Drawing.Point(644, 99);
+            this.lb_EC.Name = "lb_EC";
+            this.lb_EC.Size = new System.Drawing.Size(0, 18);
+            this.lb_EC.TabIndex = 57;
+            // 
+            // lb_STKC
+            // 
+            this.lb_STKC.AutoSize = true;
+            this.lb_STKC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_STKC.ForeColor = System.Drawing.Color.Red;
+            this.lb_STKC.Location = new System.Drawing.Point(644, 166);
+            this.lb_STKC.Name = "lb_STKC";
+            this.lb_STKC.Size = new System.Drawing.Size(0, 18);
+            this.lb_STKC.TabIndex = 58;
+            // 
+            // lb_PNC
+            // 
+            this.lb_PNC.AutoSize = true;
+            this.lb_PNC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_PNC.ForeColor = System.Drawing.Color.Red;
+            this.lb_PNC.Location = new System.Drawing.Point(644, 230);
+            this.lb_PNC.Name = "lb_PNC";
+            this.lb_PNC.Size = new System.Drawing.Size(0, 18);
+            this.lb_PNC.TabIndex = 59;
+            // 
+            // lb_SCMC
+            // 
+            this.lb_SCMC.AutoSize = true;
+            this.lb_SCMC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_SCMC.ForeColor = System.Drawing.Color.Red;
+            this.lb_SCMC.Location = new System.Drawing.Point(644, 303);
+            this.lb_SCMC.Name = "lb_SCMC";
+            this.lb_SCMC.Size = new System.Drawing.Size(0, 18);
+            this.lb_SCMC.TabIndex = 60;
+            // 
+            // lb_AC
+            // 
+            this.lb_AC.AutoSize = true;
+            this.lb_AC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_AC.ForeColor = System.Drawing.Color.Red;
+            this.lb_AC.Location = new System.Drawing.Point(644, 368);
+            this.lb_AC.Name = "lb_AC";
+            this.lb_AC.Size = new System.Drawing.Size(0, 18);
+            this.lb_AC.TabIndex = 61;
+            // 
+            // lb_BC
+            // 
+            this.lb_BC.AutoSize = true;
+            this.lb_BC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_BC.ForeColor = System.Drawing.Color.Red;
+            this.lb_BC.Location = new System.Drawing.Point(644, 441);
+            this.lb_BC.Name = "lb_BC";
+            this.lb_BC.Size = new System.Drawing.Size(0, 18);
+            this.lb_BC.TabIndex = 62;
+            // 
+            // lbl_ThongBao
+            // 
+            this.lbl_ThongBao.AutoSize = true;
+            this.lbl_ThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbl_ThongBao.Location = new System.Drawing.Point(308, 617);
+            this.lbl_ThongBao.Name = "lbl_ThongBao";
+            this.lbl_ThongBao.Size = new System.Drawing.Size(0, 18);
+            this.lbl_ThongBao.TabIndex = 63;
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(811, 661);
+            this.Controls.Add(this.lbl_ThongBao);
+            this.Controls.Add(this.lb_BC);
+            this.Controls.Add(this.lb_AC);
+            this.Controls.Add(this.lb_SCMC);
+            this.Controls.Add(this.lb_PNC);
+            this.Controls.Add(this.lb_STKC);
+            this.Controls.Add(this.lb_EC);
+            this.Controls.Add(this.lb_NC);
+            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.btn_CapNhat);
             this.Controls.Add(this.txt_NgayDangKy);
             this.Controls.Add(this.label8);
@@ -294,5 +402,14 @@
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_CapNhat;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label lb_NC;
+        private System.Windows.Forms.Label lb_EC;
+        private System.Windows.Forms.Label lb_STKC;
+        private System.Windows.Forms.Label lb_PNC;
+        private System.Windows.Forms.Label lb_SCMC;
+        private System.Windows.Forms.Label lb_AC;
+        private System.Windows.Forms.Label lb_BC;
+        private System.Windows.Forms.Label lbl_ThongBao;
     }
 }
