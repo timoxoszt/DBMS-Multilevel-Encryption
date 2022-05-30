@@ -97,9 +97,29 @@ class OrderController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $uuid)
     {
-        //
+        $order = Order::where('uuid', $uuid)->first();
+        if (is_null($order)) {
+            return $this->sendError('Order does not exist.');
+        }
+        $input = $request->all();
+        $validator = Validator::make($input, [
+            'ma_sp' => 'required|string',
+            'so_luong' => 'required|integer',
+        ]);
+        if($validator->fails()){
+            return $this->sendError($validator->errors());       
+        }
+        try{                      
+            $order->ma_sp = $input['ma_sp'];
+            $order->so_luong = $input['so_luong'];
+            $order->save();
+
+            return $this->sendResponse(new OrderResource($order), 'Order updated.');
+        }catch(\Exception $e){
+            return $this->sendError('Permission denied.');
+        }
     }
 
     /**
