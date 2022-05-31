@@ -48,7 +48,6 @@
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.LV_Data = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +55,7 @@
             // 
             this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Del.Location = new System.Drawing.Point(189, 557);
+            this.btn_Del.Location = new System.Drawing.Point(265, 557);
             this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(108, 39);
@@ -69,7 +68,7 @@
             // 
             this.btn_Save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Save.Location = new System.Drawing.Point(73, 557);
+            this.btn_Save.Location = new System.Drawing.Point(88, 557);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(108, 39);
@@ -127,7 +126,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txt_NDK);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txt_Birth);
@@ -306,18 +304,6 @@
             this.LV_Data.View = System.Windows.Forms.View.Details;
             this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(304, 557);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 39);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // List_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,6 +341,5 @@
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView LV_Data;
-        private System.Windows.Forms.Button button1;
     }
 }
