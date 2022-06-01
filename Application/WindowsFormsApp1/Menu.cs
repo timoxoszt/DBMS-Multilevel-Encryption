@@ -39,5 +39,11 @@ namespace WindowsFormsApp1
             List_HH p = new List_HH();
             p.Show();  
         }
+
+        private void btn_DatHang_Click(object sender, EventArgs e)
+        {
+            Bill p = new Bill();
+            p.Show();
+        }
     }
 }

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Del = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.txt_STK = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.txt_NDK = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Birth = new System.Windows.Forms.TextBox();
@@ -48,6 +48,15 @@
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.LV_Data = new System.Windows.Forms.ListView();
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            this.btn_Del = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+=======
+>>>>>>> Stashed changes
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +73,7 @@
             this.btn_Del.UseVisualStyleBackColor = true;
             this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
+>>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +136,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            this.panel1.Controls.Add(this.btn_Refresh);
+=======
+>>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
+>>>>>>> Stashed changes
             this.panel1.Controls.Add(this.txt_NDK);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txt_Birth);
@@ -150,6 +167,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 622);
             this.panel1.TabIndex = 9;
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Refresh.Location = new System.Drawing.Point(304, 557);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(108, 39);
+            this.btn_Refresh.TabIndex = 36;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // txt_NDK
             // 
@@ -292,18 +321,39 @@
             // 
             // LV_Data
             // 
+            this.LV_Data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LV_Data.FullRowSelect = true;
+            this.LV_Data.GridLines = true;
             this.LV_Data.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.LV_Data.HideSelection = false;
-            this.LV_Data.Location = new System.Drawing.Point(12, 12);
+            this.LV_Data.Location = new System.Drawing.Point(0, 0);
             this.LV_Data.MultiSelect = false;
             this.LV_Data.Name = "LV_Data";
-            this.LV_Data.Size = new System.Drawing.Size(467, 598);
+            this.LV_Data.Size = new System.Drawing.Size(486, 622);
             this.LV_Data.TabIndex = 39;
             this.LV_Data.UseCompatibleStateImageBehavior = false;
             this.LV_Data.View = System.Windows.Forms.View.Details;
             this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            // btn_Del
+            // 
+            this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Del.Location = new System.Drawing.Point(189, 557);
+            this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Del.Name = "btn_Del";
+            this.btn_Del.Size = new System.Drawing.Size(108, 39);
+            this.btn_Del.TabIndex = 25;
+            this.btn_Del.Text = "Xóa";
+            this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
+            // 
+=======
+>>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
+>>>>>>> Stashed changes
             // List_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -321,7 +371,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_Del;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.TextBox txt_STK;
         private System.Windows.Forms.Label label5;
@@ -341,5 +390,13 @@
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView LV_Data;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.Button btn_Del;
+=======
+>>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
+>>>>>>> Stashed changes
     }
 }

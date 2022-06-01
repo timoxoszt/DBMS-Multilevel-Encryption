@@ -57,3 +57,5 @@ E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\De
 E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\Debug\System.Net.Http.Primitives.dll
 E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
 E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Bill.resources
+E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.List_Bill.resources

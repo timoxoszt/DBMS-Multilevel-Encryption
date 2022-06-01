@@ -30,7 +30,7 @@
         {
             this.btn_DSNguoiDung = new System.Windows.Forms.Button();
             this.btn_DanhSachHangHoa = new System.Windows.Forms.Button();
-            this.btn_DanhSachDonMua = new System.Windows.Forms.Button();
+            this.btn_DanhSachDonHang = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_DSNguoiDung
@@ -53,21 +53,22 @@
             this.btn_DanhSachHangHoa.UseVisualStyleBackColor = true;
             this.btn_DanhSachHangHoa.Click += new System.EventHandler(this.btn_DanhSachHangHoa_Click);
             // 
-            // btn_DanhSachDonMua
+            // btn_DanhSachDonHang
             // 
-            this.btn_DanhSachDonMua.Location = new System.Drawing.Point(404, 106);
-            this.btn_DanhSachDonMua.Name = "btn_DanhSachDonMua";
-            this.btn_DanhSachDonMua.Size = new System.Drawing.Size(127, 64);
-            this.btn_DanhSachDonMua.TabIndex = 2;
-            this.btn_DanhSachDonMua.Text = "Danh Sách Đơn Mua";
-            this.btn_DanhSachDonMua.UseVisualStyleBackColor = true;
+            this.btn_DanhSachDonHang.Location = new System.Drawing.Point(404, 106);
+            this.btn_DanhSachDonHang.Name = "btn_DanhSachDonHang";
+            this.btn_DanhSachDonHang.Size = new System.Drawing.Size(127, 64);
+            this.btn_DanhSachDonHang.TabIndex = 2;
+            this.btn_DanhSachDonHang.Text = "Danh Sách Đơn Hàng";
+            this.btn_DanhSachDonHang.UseVisualStyleBackColor = true;
+            this.btn_DanhSachDonHang.Click += new System.EventHandler(this.btn_DanhSachDonHang_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 305);
-            this.Controls.Add(this.btn_DanhSachDonMua);
+            this.Controls.Add(this.btn_DanhSachDonHang);
             this.Controls.Add(this.btn_DanhSachHangHoa);
             this.Controls.Add(this.btn_DSNguoiDung);
             this.Name = "Admin";
@@ -80,6 +81,6 @@
 
         private System.Windows.Forms.Button btn_DSNguoiDung;
         private System.Windows.Forms.Button btn_DanhSachHangHoa;
-        private System.Windows.Forms.Button btn_DanhSachDonMua;
+        private System.Windows.Forms.Button btn_DanhSachDonHang;
     }
 }

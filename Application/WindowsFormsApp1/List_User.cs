@@ -171,7 +171,45 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Chọn user cần sửa", "Thông báo");
             }
+<<<<<<< Updated upstream
             Refreshing();
+=======
+<<<<<<< HEAD
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+
+            WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/users");
+            request.Headers["Authorization"] = "Bearer " + Login.token;
+            request.PreAuthenticate = true;
+            //phần response
+            response = request.GetResponse();
+            LV_Data.Items.Clear();
+            using (Stream dataStream = response.GetResponseStream())
+            {
+                StreamReader reader = new StreamReader(dataStream);
+                string datajson = reader.ReadToEnd();
+                dataprofile = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(datajson);
+                int i = 0;
+                foreach (Data data in dataprofile.data)
+                {
+                    i++;
+                    ListViewItem item = new ListViewItem(i.ToString());
+                    ListViewItem.ListViewSubItem name = new ListViewItem.ListViewSubItem(item, data.ho_ten);
+                    ListViewItem.ListViewSubItem sodt = new ListViewItem.ListViewSubItem(item, data.sdt);
+                    item.SubItems.Add(name);
+                    LV_Data.Items.Add(item);
+                    item.SubItems.Add(sodt);
+                }
+                dataStream.Close();
+                response.Close();
+            }
+            request.Abort();
+=======
+            Refreshing();
+>>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
+>>>>>>> Stashed changes
         }
 
         private void btn_Del_Click(object sender, EventArgs e)

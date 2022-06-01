@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_DonMua = new System.Windows.Forms.Button();
             this.btn_Admin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.btn_Left = new System.Windows.Forms.Button();
             this.btn_Right = new System.Windows.Forms.Button();
             this.Image = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,6 +66,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 727);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(68, 424);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "List HH";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_DonMua
             // 
@@ -136,6 +146,7 @@
             this.btn_DatHang.TabIndex = 5;
             this.btn_DatHang.Text = "Đặt Hàng";
             this.btn_DatHang.UseVisualStyleBackColor = false;
+            this.btn_DatHang.Click += new System.EventHandler(this.btn_DatHang_Click);
             // 
             // panel2
             // 
@@ -226,16 +237,6 @@
             this.Image.Size = new System.Drawing.Size(613, 539);
             this.Image.TabIndex = 2;
             this.Image.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(68, 424);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "List HH";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
