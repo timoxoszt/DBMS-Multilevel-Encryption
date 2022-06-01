@@ -171,10 +171,8 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Chọn user cần sửa", "Thông báo");
             }
-<<<<<<< Updated upstream
             Refreshing();
-=======
-<<<<<<< HEAD
+
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
@@ -206,10 +204,7 @@ namespace WindowsFormsApp1
                 response.Close();
             }
             request.Abort();
-=======
-            Refreshing();
->>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
->>>>>>> Stashed changes
+
         }
 
         private void btn_Del_Click(object sender, EventArgs e)
