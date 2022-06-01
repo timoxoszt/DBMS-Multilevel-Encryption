@@ -48,15 +48,7 @@
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.LV_Data = new System.Windows.Forms.ListView();
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
             this.btn_Del = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-=======
->>>>>>> Stashed changes
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +65,6 @@
             this.btn_Del.UseVisualStyleBackColor = true;
             this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
->>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,13 +127,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
             this.panel1.Controls.Add(this.btn_Refresh);
-=======
->>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
->>>>>>> Stashed changes
             this.panel1.Controls.Add(this.txt_NDK);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txt_Birth);
@@ -335,9 +320,6 @@
             this.LV_Data.View = System.Windows.Forms.View.Details;
             this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
             // btn_Del
             // 
             this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,9 +333,6 @@
             this.btn_Del.UseVisualStyleBackColor = true;
             this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
-=======
->>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
->>>>>>> Stashed changes
             // List_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,13 +369,7 @@
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView LV_Data;
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Del;
-=======
->>>>>>> 1df55d2f18652dae5825ebb9f7dc76bb87670e08
->>>>>>> Stashed changes
     }
 }
