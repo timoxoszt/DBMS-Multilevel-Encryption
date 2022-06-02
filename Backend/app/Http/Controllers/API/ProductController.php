@@ -48,26 +48,20 @@ class ProductController extends BaseController
             'ten_sp' => 'required|string',
             'ma_sp' => 'required|string|max:10',            
             'dvt' => 'required|string|max:20',            
-            'gia' => 'required|integer',  
-            'image' => 'required|mimes:png,jpg|max:2048',          
+            'gia' => 'required|integer',                      
         ]);
 
         if($validator->fails()){
             return $this->sendError('Create product failed.', ['error'=>'Check your input.']);   
         } 
 
-        if ($files = $request->file('image')) {
-            // get image from request
-            $file = $request->image;
-
-            $product = Product::create([
-                'ten_sp' => $request->ten_sp,             
-                'dvt' => $request->dvt,
-                'ma_sp' => $request->ma_sp,   
-                'gia' => $request->gia,   
-                'image' => base64_encode(file_get_contents($file)),
-            ]);           
-        }
+        $product = Product::create([
+            'ten_sp' => $request->ten_sp,             
+            'dvt' => $request->dvt,
+            'ma_sp' => $request->ma_sp,   
+            'gia' => $request->gia,
+        ]);           
+        
         return $this->sendResponse(new ProductResource($product), 'Created product.');
     }
 
