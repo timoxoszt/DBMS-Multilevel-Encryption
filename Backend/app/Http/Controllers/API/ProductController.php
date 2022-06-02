@@ -104,9 +104,36 @@ class ProductController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $ma_sp)
     {
-        //
+        $product = Product::where('ma_sp', $ma_sp)->first();
+        if (is_null($product)) {
+            return $this->sendError('Product does not exist.');
+        }
+        $input = $request->all();        
+            
+        $validator = Validator::make($input, [
+            'ten_sp' => 'required|string',
+            'ma_sp' => 'required|string|max:10',            
+            'dvt' => 'required|string|max:20',            
+            'gia' => 'required|integer',  
+        ]);
+
+        if($validator->fails()){
+            return $this->sendError($validator->errors());       
+        }        
+       
+        try{                      
+            $product->ten_sp = $input['ten_sp'];
+            $product->dvt = $input['dvt'];
+            $product->ma_sp = $input['ma_sp'];
+            $product->gia = $input['gia'];
+            $product->save();
+
+            return $this->sendResponse(new ProductResource($product), 'Product updated.');
+        }catch(\Exception $e){
+            return $this->sendError('Permission denied.');
+        }
     }
 
     /**
