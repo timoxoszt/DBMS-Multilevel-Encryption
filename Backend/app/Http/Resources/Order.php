@@ -22,15 +22,14 @@ class Order extends JsonResource
             $ten_sp = "Product is not exist.";
         }else{
             $ten_sp = $product->ten_sp;
+        };
+
+        try{
+            $gia_sp = $product->gia;
+        }catch(\Exception $e){
+            $gia_sp = 0;
         }
 
-        $gia = $product->gia;
-
-        if(is_null($gia)){
-            $gia = null;
-        }else{
-            $gia = $product->gia;
-        }
         $user = DB::table('users')->where('id', $this->user_id)->first();
         return [
             'uuid' => $this->uuid,
@@ -39,7 +38,7 @@ class Order extends JsonResource
             'ma_sp' => $this->ma_sp,
             'ten_sp' => $ten_sp,
             'so_luong' => $this->so_luong,
-            'gia' => $gia,
+            'gia' => $gia_sp,
             'ngay_dat' => $this->created_at->format('d/m/Y'),
         ];
     }
