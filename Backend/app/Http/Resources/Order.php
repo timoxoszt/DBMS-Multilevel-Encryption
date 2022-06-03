@@ -23,6 +23,14 @@ class Order extends JsonResource
         }else{
             $ten_sp = $product->ten_sp;
         }
+
+        $gia = $product->gia;
+
+        if(is_null($gia)){
+            $gia = null;
+        }else{
+            $gia = $product->gia;
+        }
         $user = DB::table('users')->where('id', $this->user_id)->first();
         return [
             'uuid' => $this->uuid,
@@ -31,7 +39,7 @@ class Order extends JsonResource
             'ma_sp' => $this->ma_sp,
             'ten_sp' => $ten_sp,
             'so_luong' => $this->so_luong,
-            'gia' => $product->gia,
+            'gia' => $gia,
             'ngay_dat' => $this->created_at->format('d/m/Y'),
         ];
     }
