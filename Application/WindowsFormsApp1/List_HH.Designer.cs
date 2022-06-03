@@ -40,8 +40,8 @@
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Image = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Image = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
@@ -205,15 +205,6 @@
             this.panel1.Size = new System.Drawing.Size(440, 654);
             this.panel1.TabIndex = 9;
             // 
-            // Image
-            // 
-            this.Image.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Image.Location = new System.Drawing.Point(40, 289);
-            this.Image.Name = "Image";
-            this.Image.Size = new System.Drawing.Size(377, 263);
-            this.Image.TabIndex = 26;
-            this.Image.TabStop = false;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,6 +215,16 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "Sửa";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Image
+            // 
+            this.Image.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Image.Location = new System.Drawing.Point(40, 330);
+            this.Image.Name = "Image";
+            this.Image.Size = new System.Drawing.Size(377, 222);
+            this.Image.TabIndex = 26;
+            this.Image.TabStop = false;
             // 
             // List_HH
             // 

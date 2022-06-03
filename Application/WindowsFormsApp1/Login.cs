@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
             Create_An_Accout p = new Create_An_Accout();
             p.Show();
         }
-
+        public static string name;
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             if (IsValidEmail(txt_Email.Text))
@@ -140,6 +140,7 @@ namespace WindowsFormsApp1
                         datajson = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(responseFromServer);
                         this.Hide();
                         token = datajson.data.token;
+                        name = datajson.data.ho_ten;
                         Menu p = new Menu();
                         p.ShowDialog();
                         this.Show();

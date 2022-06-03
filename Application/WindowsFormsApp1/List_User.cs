@@ -163,7 +163,6 @@ namespace WindowsFormsApp1
                 // Write the data to the request stream.
                 dataStream.Write(byteArray, 0, byteArray.Length);
                 // Close the Stream object.
-                this.Invalidate();
                 dataStream.Close();
                 request.Abort();
             }
@@ -174,39 +173,6 @@ namespace WindowsFormsApp1
             Refreshing();
 
         }
-
-        private void btn_Refresh_Click(object sender, EventArgs e)
-        {
-
-            WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/users");
-            request.Headers["Authorization"] = "Bearer " + Login.token;
-            request.PreAuthenticate = true;
-            //phần response
-            response = request.GetResponse();
-            LV_Data.Items.Clear();
-            using (Stream dataStream = response.GetResponseStream())
-            {
-                StreamReader reader = new StreamReader(dataStream);
-                string datajson = reader.ReadToEnd();
-                dataprofile = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(datajson);
-                int i = 0;
-                foreach (Data data in dataprofile.data)
-                {
-                    i++;
-                    ListViewItem item = new ListViewItem(i.ToString());
-                    ListViewItem.ListViewSubItem name = new ListViewItem.ListViewSubItem(item, data.ho_ten);
-                    ListViewItem.ListViewSubItem sodt = new ListViewItem.ListViewSubItem(item, data.sdt);
-                    item.SubItems.Add(name);
-                    LV_Data.Items.Add(item);
-                    item.SubItems.Add(sodt);
-                }
-                dataStream.Close();
-                response.Close();
-            }
-            request.Abort();
-
-        }
-
         private void btn_Del_Click(object sender, EventArgs e)
         {
             response.Close();

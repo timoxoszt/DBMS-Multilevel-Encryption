@@ -34,7 +34,6 @@
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Refresh = new System.Windows.Forms.Button();
             this.txt_NDK = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Birth = new System.Windows.Forms.TextBox();
@@ -45,25 +44,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Del = new System.Windows.Forms.Button();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.LV_Data = new System.Windows.Forms.ListView();
-            this.btn_Del = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_Del
-            // 
-            this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Del.Location = new System.Drawing.Point(265, 557);
-            this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Del.Name = "btn_Del";
-            this.btn_Del.Size = new System.Drawing.Size(108, 39);
-            this.btn_Del.TabIndex = 25;
-            this.btn_Del.Text = "Xóa";
-            this.btn_Del.UseVisualStyleBackColor = true;
-            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Save
             // 
@@ -127,7 +113,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.btn_Refresh);
             this.panel1.Controls.Add(this.txt_NDK);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txt_Birth);
@@ -152,18 +137,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 622);
             this.panel1.TabIndex = 9;
-            // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Refresh.Location = new System.Drawing.Point(304, 557);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(108, 39);
-            this.btn_Refresh.TabIndex = 36;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = true;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // txt_NDK
             // 
@@ -281,6 +254,19 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Số Điện Thoại";
             // 
+            // btn_Del
+            // 
+            this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Del.Location = new System.Drawing.Point(268, 557);
+            this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Del.Name = "btn_Del";
+            this.btn_Del.Size = new System.Drawing.Size(108, 39);
+            this.btn_Del.TabIndex = 25;
+            this.btn_Del.Text = "Xóa";
+            this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
+            // 
             // txt_Name
             // 
             this.txt_Name.BackColor = System.Drawing.Color.LemonChiffon;
@@ -320,19 +306,6 @@
             this.LV_Data.View = System.Windows.Forms.View.Details;
             this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
-            // btn_Del
-            // 
-            this.btn_Del.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Del.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Del.Location = new System.Drawing.Point(189, 557);
-            this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Del.Name = "btn_Del";
-            this.btn_Del.Size = new System.Drawing.Size(108, 39);
-            this.btn_Del.TabIndex = 25;
-            this.btn_Del.Text = "Xóa";
-            this.btn_Del.UseVisualStyleBackColor = true;
-            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
-            // 
             // List_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -369,7 +342,6 @@
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView LV_Data;
-        private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Del;
     }
 }

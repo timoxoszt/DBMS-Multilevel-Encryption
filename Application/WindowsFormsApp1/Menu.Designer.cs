@@ -29,36 +29,31 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_Name = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_DonMua = new System.Windows.Forms.Button();
             this.btn_Admin = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_Name = new System.Windows.Forms.Label();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btn_Info = new System.Windows.Forms.Button();
             this.btn_DatHang = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_Left = new System.Windows.Forms.Button();
-            this.btn_Right = new System.Windows.Forms.Button();
-            this.Image = new System.Windows.Forms.PictureBox();
+            this.txt_SL = new System.Windows.Forms.TextBox();
+            this.LV_Data = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.lb_Name);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_DonMua);
             this.panel1.Controls.Add(this.btn_Admin);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btn_Logout);
             this.panel1.Controls.Add(this.btn_Info);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -66,6 +61,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 727);
             this.panel1.TabIndex = 0;
+            // 
+            // lb_Name
+            // 
+            this.lb_Name.AutoSize = true;
+            this.lb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Name.Location = new System.Drawing.Point(14, 51);
+            this.lb_Name.Name = "lb_Name";
+            this.lb_Name.Size = new System.Drawing.Size(0, 20);
+            this.lb_Name.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 25);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Tên người dùng:";
             // 
             // button1
             // 
@@ -97,23 +111,6 @@
             this.btn_Admin.Text = "Trang Quản Trị";
             this.btn_Admin.UseVisualStyleBackColor = false;
             this.btn_Admin.Click += new System.EventHandler(this.btn_Admin_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lbl_Name);
-            this.panel3.Location = new System.Drawing.Point(12, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(205, 143);
-            this.panel3.TabIndex = 7;
-            // 
-            // lbl_Name
-            // 
-            this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(5, 9);
-            this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(105, 16);
-            this.lbl_Name.TabIndex = 1;
-            this.lbl_Name.Text = "Tên Người Dùng";
             // 
             // btn_Logout
             // 
@@ -150,15 +147,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.LV_Data);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txt_SL);
             this.panel2.Controls.Add(this.btn_DatHang);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btn_Left);
-            this.panel2.Controls.Add(this.btn_Right);
-            this.panel2.Controls.Add(this.Image);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(233, 0);
             this.panel2.Name = "panel2";
@@ -168,75 +161,41 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(316, 579);
+            this.label4.Location = new System.Drawing.Point(321, 577);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Số Lượng";
             // 
-            // textBox1
+            // txt_SL
             // 
-            this.textBox1.Location = new System.Drawing.Point(391, 574);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "1";
+            this.txt_SL.Location = new System.Drawing.Point(402, 574);
+            this.txt_SL.Name = "txt_SL";
+            this.txt_SL.Size = new System.Drawing.Size(100, 22);
+            this.txt_SL.TabIndex = 8;
+            this.txt_SL.Text = "1";
             // 
-            // label3
+            // LV_Data
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(558, 646);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Giá";
+            this.LV_Data.FullRowSelect = true;
+            this.LV_Data.HideSelection = false;
+            this.LV_Data.Location = new System.Drawing.Point(29, 12);
+            this.LV_Data.Name = "LV_Data";
+            this.LV_Data.Size = new System.Drawing.Size(780, 547);
+            this.LV_Data.TabIndex = 10;
+            this.LV_Data.UseCompatibleStateImageBehavior = false;
+            this.LV_Data.View = System.Windows.Forms.View.Details;
+            this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 646);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "DV";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 646);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tên";
-            // 
-            // btn_Left
-            // 
-            this.btn_Left.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Left.Location = new System.Drawing.Point(17, 259);
-            this.btn_Left.Name = "btn_Left";
-            this.btn_Left.Size = new System.Drawing.Size(78, 57);
-            this.btn_Left.TabIndex = 4;
-            this.btn_Left.Text = "<<";
-            this.btn_Left.UseVisualStyleBackColor = false;
-            // 
-            // btn_Right
-            // 
-            this.btn_Right.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Right.Location = new System.Drawing.Point(748, 259);
-            this.btn_Right.Name = "btn_Right";
-            this.btn_Right.Size = new System.Drawing.Size(75, 57);
-            this.btn_Right.TabIndex = 3;
-            this.btn_Right.Text = ">>";
-            this.btn_Right.UseVisualStyleBackColor = false;
-            // 
-            // Image
-            // 
-            this.Image.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Image.Location = new System.Drawing.Point(114, 12);
-            this.Image.Name = "Image";
-            this.Image.Size = new System.Drawing.Size(613, 539);
-            this.Image.TabIndex = 2;
-            this.Image.TabStop = false;
+            this.button2.Location = new System.Drawing.Point(402, 667);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(173, 48);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Hóa đơn";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Menu
             // 
@@ -247,12 +206,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Image)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,19 +222,15 @@
         private System.Windows.Forms.Button btn_DonMua;
         private System.Windows.Forms.Button btn_Logout;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Button btn_Info;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Left;
-        private System.Windows.Forms.Button btn_Right;
-        private System.Windows.Forms.PictureBox Image;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Admin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_SL;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lb_Name;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListView LV_Data;
+        private System.Windows.Forms.Button button2;
     }
 }
 

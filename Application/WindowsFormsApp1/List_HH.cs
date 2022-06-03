@@ -114,50 +114,25 @@ namespace WindowsFormsApp1
                     txt_ID.Text = dataprofile.data[i - 1].ma_sp.ToString();
                     txt_Price.Text = dataprofile.data[i - 1].gia.ToString();
                     txt_DVT.Text = dataprofile.data[i - 1].dvt.ToString();
-                    Image B64TI = Base64ToImage(dataprofile.data[i - 1].image.ToString());
-                    Image.SizeMode = PictureBoxSizeMode.StretchImage;
-                    Image.Image = B64TI;
+
                 }
             }
         }
 
-        public static Image Base64ToImage(string base64String)
-        {
-            byte[] buffer = Convert.FromBase64String(base64String);
-
-            if (buffer != null)
-            {
-                ImageConverter ic = new ImageConverter();
-                return ic.ConvertFrom(buffer) as Image;
-            }
-            else
-                return null;
-        }
         private int intselectedindex;
-        string path;
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            // image filters  
-            open.Filter = "Image Files(*.jpg; *.png)|*.jpg; *.png";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                path = open.FileName;
-            }
-            byte[] imageArray = System.IO.File.ReadAllBytes(@path);
-            string base64Image = Convert.ToBase64String(imageArray);
-
-            string postData = "ten_sp=" + txt_Name.Text
-                            + "&dvt=" + txt_DVT.Text
-                            + "&masp=" + txt_ID.Text
-                            + "&gia=" + txt_Price.Text
-                            + "&image=" + base64Image;
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
             WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/products");
             request.Headers["Authorization"] = "Bearer " + Login.token;
             request.PreAuthenticate = true;
             // Set the Method property of the request to POST.
             request.Method = "POST";
+            string postData = "ma_sp=" + txt_ID.Text
+                            + "&ten_sp=" + txt_Name.Text
+                            + "&dvt=" + txt_DVT.Text
+                            + "&gia=" + txt_Price.Text;
+            //+ "&image=null";
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
             request.ContentType = "application/x-www-form-urlencoded";
             // Set the ContentLength property of the WebRequest.
             request.ContentLength = byteArray.Length;
@@ -196,6 +171,48 @@ namespace WindowsFormsApp1
                 request.Abort();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "Thông báo"); }
+            Refreshing();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i = 0;
+                if (LV_Data.SelectedIndices.Count > 0)
+                {
+                    intselectedindex = LV_Data.SelectedIndices[0];
+                    if (intselectedindex >= 0)
+                    {
+                        string text = LV_Data.Items[intselectedindex].Text;
+                        i = Int32.Parse(text);
+                    }
+                }
+                string s = "https://dbms-abe.f1301.cyou/api/products/" + dataprofile.data[i - 1].ma_sp.ToString();
+                WebRequest request = WebRequest.Create(s);
+                request.Headers["Authorization"] = "Bearer " + Login.token;
+                request.PreAuthenticate = true;
+                request.Method = "PUT";
+                string postData = "ma_sp=" + txt_ID.Text
+                                + "&ten_sp=" + txt_Name.Text
+                                + "&dvt=" + txt_DVT.Text
+                                + "&gia=" + txt_Price.Text
+                                + "&image=null";
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+                request.ContentType = "application/x-www-form-urlencoded";
+                // Set the ContentLength property of the WebRequest.
+                request.ContentLength = byteArray.Length;
+                Stream dataStream = request.GetRequestStream();
+                // Write the data to the request stream.
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                // Close the Stream object.
+                this.Invalidate();
+                dataStream.Close();
+                request.Abort();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Chọn user cần sửa", "Thông báo");
+            }
             Refreshing();
         }
     }
