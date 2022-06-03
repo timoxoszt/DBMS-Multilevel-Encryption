@@ -31,6 +31,7 @@ class Order extends JsonResource
             'ma_sp' => $this->ma_sp,
             'ten_sp' => $ten_sp,
             'so_luong' => $this->so_luong,
+            'gia' => $product->gia,
             'ngay_dat' => $this->created_at->format('d/m/Y'),
         ];
     }
