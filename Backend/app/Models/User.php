@@ -30,6 +30,10 @@ class User extends Authenticatable
         'stk',
         'email',
         'password',
+        'user_type',
+        'user_role',
+        'section',
+        'time',
     ];
 
     /**
