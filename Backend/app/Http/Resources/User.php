@@ -24,6 +24,10 @@ class User extends JsonResource
             'stk' => Crypt::decryptString($this->stk),
             'cmnd' => Crypt::decryptString($this->cmnd),
             'ngay_sinh' => Crypt::decryptString($this->ngay_sinh),
+            'user_role' => Crypt::decryptString($this->user_role),
+            'user_type' => Crypt::decryptString($this->user_type),
+            'section' => Crypt::decryptString($this->section),
+            'time' => Crypt::decryptString($this->time),
             'email' => $this->email,
             'ngay_dk' => $this->created_at->format('d/m/Y'),
         ];

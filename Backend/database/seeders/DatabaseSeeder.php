@@ -27,6 +27,10 @@ class DatabaseSeeder extends Seeder
             'ngay_sinh' => Crypt::encryptString('2002/01/02'),
             'email' => 'tienvm@gmail.com',
             'password' => bcrypt('Gy?&dP%W38hpk38SUhw'),
+            'user_role' => Crypt::encryptString('ChuShopHang'),
+            'user_type' => Crypt::encryptString('Owner'),
+            'section' => Crypt::encryptString('[Order,Product,User]'),
+            'time' => Crypt::encryptString('day'),
         ]);
 
         $long = User::create([
@@ -38,6 +42,10 @@ class DatabaseSeeder extends Seeder
             'ngay_sinh' => Crypt::encryptString('2002/01/01'),
             'email' => 'longdx@gmail.com',
             'password' => bcrypt('9=HE=MQz9VvWLvcw*sX'),
+            'user_role' => Crypt::encryptString('KeToan'),
+            'user_type' => Crypt::encryptString('Manage'),
+            'section' => Crypt::encryptString('[Order,Product,User]'),
+            'time' => Crypt::encryptString('7h-17h'),
         ]);
 
         $hiep = User::create([
@@ -49,6 +57,40 @@ class DatabaseSeeder extends Seeder
             'ngay_sinh' => Crypt::encryptString('2002/02/02'),
             'email' => 'hieptv@gmail.com',
             'password' => bcrypt('r6u29XBX4?-!%@kRS&^'),
+            'user_role' => Crypt::encryptString('ThuKho'),
+            'user_type' => Crypt::encryptString('Manage'),
+            'section' => Crypt::encryptString('Product'),
+            'time' => Crypt::encryptString('7h-17h'),
+        ]);
+
+        $giaohang = User::create([
+            'ho_ten' => Crypt::encryptString('Người giao hàng'),
+            'sdt' => Crypt::encryptString('08127336456'),
+            'stk' => Crypt::encryptString('712371284126'),
+            'cmnd' => Crypt::encryptString('12631723712'),
+            'dia_chi' => Crypt::encryptString('Quận 1, TP HCM'),
+            'ngay_sinh' => Crypt::encryptString('1999/02/02'),
+            'email' => 'shipper@gmail.com',
+            'password' => bcrypt('9a9hC]RA)LsvnU~w<'),
+            'user_role' => Crypt::encryptString('NguoiGiaoHang'),
+            'user_type' => Crypt::encryptString('Employee'),
+            'section' => Crypt::encryptString('Order'),
+            'time' => Crypt::encryptString('8h-16h'),
+        ]);
+
+        $khachhang = User::create([
+            'ho_ten' => Crypt::encryptString('Khách mua hàng'),
+            'sdt' => Crypt::encryptString('08127123123'),
+            'stk' => Crypt::encryptString('712234512312'),
+            'cmnd' => Crypt::encryptString('126312312256'),
+            'dia_chi' => Crypt::encryptString('Khu phố 6, Linh Trung, Thủ Đức'),
+            'ngay_sinh' => Crypt::encryptString('1990/03/03'),
+            'email' => 'customer@gmail.com',
+            'password' => bcrypt('@v5]LJ.9)Wa,,2=Nk'),
+            'user_role' => Crypt::encryptString('NguoiMuaHang'),
+            'user_type' => Crypt::encryptString('Customer'),
+            'section' => Crypt::encryptString('Product'),
+            'time' => Crypt::encryptString('day'),
         ]);
 
         $dep = Product::create([
