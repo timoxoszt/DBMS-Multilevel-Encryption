@@ -39,6 +39,8 @@
             this.txt_User = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_Date = new System.Windows.Forms.TextBox();
             this.txt_Tensp = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_Price = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@
             this.txt_UUID = new System.Windows.Forms.TextBox();
             this.lb_UUID = new System.Windows.Forms.Label();
             this.Image = new System.Windows.Forms.PictureBox();
-            this.txt_Date = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,7 @@
             this.btn_Del.TabIndex = 25;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Visible = false;
             this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // txt_Masp
@@ -204,6 +205,29 @@
             this.panel1.Size = new System.Drawing.Size(537, 715);
             this.panel1.TabIndex = 11;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(72, 326);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 17);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Ngày đặt";
+            // 
+            // txt_Date
+            // 
+            this.txt_Date.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txt_Date.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Date.ForeColor = System.Drawing.Color.Navy;
+            this.txt_Date.Location = new System.Drawing.Point(204, 323);
+            this.txt_Date.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Date.Name = "txt_Date";
+            this.txt_Date.Size = new System.Drawing.Size(190, 25);
+            this.txt_Date.TabIndex = 42;
+            // 
             // txt_Tensp
             // 
             this.txt_Tensp.BackColor = System.Drawing.Color.LemonChiffon;
@@ -281,29 +305,6 @@
             this.Image.Size = new System.Drawing.Size(470, 246);
             this.Image.TabIndex = 26;
             this.Image.TabStop = false;
-            // 
-            // txt_Date
-            // 
-            this.txt_Date.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txt_Date.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Date.ForeColor = System.Drawing.Color.Navy;
-            this.txt_Date.Location = new System.Drawing.Point(204, 323);
-            this.txt_Date.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Date.Name = "txt_Date";
-            this.txt_Date.Size = new System.Drawing.Size(190, 25);
-            this.txt_Date.TabIndex = 42;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(72, 326);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 17);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Ngày đặt";
             // 
             // List_Bill
             // 

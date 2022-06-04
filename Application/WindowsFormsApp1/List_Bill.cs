@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
         private int i;
         private void List_Bill_Load(object sender, EventArgs e)
         {
+            if (Login.utype.Contains("Customer") && Login.urole.Contains("NguoiMuaHang")) btn_Del.Visible = true;
             using (Stream dataStream = response.GetResponseStream())
             {
                 StreamReader reader = new StreamReader(dataStream);
@@ -111,9 +112,17 @@ namespace WindowsFormsApp1
             request.PreAuthenticate = true;
             request.Method = "DELETE";
             request.Accept = "*/*";
-            response = request.GetResponse();
-            HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
-            request.Abort();
+            try
+            {
+                response = request.GetResponse();
+                HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+                request.Abort();
+                Refreshing();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Bạn không phải là người sở hữu hóa đơn này.", "Thông báo");
+            }
         }
 
         private void Refreshing()

@@ -40,7 +40,7 @@
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Set = new System.Windows.Forms.Button();
             this.Image = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
@@ -76,6 +76,7 @@
             this.btn_Del.TabIndex = 25;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Visible = false;
             this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Create
@@ -89,6 +90,7 @@
             this.btn_Create.TabIndex = 23;
             this.btn_Create.Text = "Tạo mới";
             this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Create.Visible = false;
             this.btn_Create.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // txt_DVT
@@ -186,7 +188,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Set);
             this.panel1.Controls.Add(this.Image);
             this.panel1.Controls.Add(this.btn_Del);
             this.panel1.Controls.Add(this.btn_Create);
@@ -205,17 +207,18 @@
             this.panel1.Size = new System.Drawing.Size(440, 654);
             this.panel1.TabIndex = 9;
             // 
-            // button1
+            // btn_Set
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(171, 581);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 39);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Set.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Set.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Set.Location = new System.Drawing.Point(171, 581);
+            this.btn_Set.Name = "btn_Set";
+            this.btn_Set.Size = new System.Drawing.Size(108, 39);
+            this.btn_Set.TabIndex = 27;
+            this.btn_Set.Text = "Sửa";
+            this.btn_Set.UseVisualStyleBackColor = true;
+            this.btn_Set.Visible = false;
+            this.btn_Set.Click += new System.EventHandler(this.button1_Click);
             // 
             // Image
             // 
@@ -258,6 +261,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox Image;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Set;
     }
 }

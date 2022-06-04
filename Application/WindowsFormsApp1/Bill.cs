@@ -79,7 +79,6 @@ namespace WindowsFormsApp1
         }
         WebResponse response { get; set; }
         Root dataprofile { get; set; }
-        private int intselectedindex;
         private int i;
         private void Connect()
         {

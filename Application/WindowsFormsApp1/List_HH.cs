@@ -82,6 +82,12 @@ namespace WindowsFormsApp1
 
         private void List_HH_Load(object sender, EventArgs e)
         {
+            if(Login.urole.Contains("ChuShopHang") && Login.utype.Contains("Onwer"))
+            {
+                btn_Create.Visible = true;
+                btn_Del.Visible = true;
+                btn_Set.Visible = true;
+            }
             using (Stream dataStream = response.GetResponseStream())
             {
                 StreamReader reader = new StreamReader(dataStream);

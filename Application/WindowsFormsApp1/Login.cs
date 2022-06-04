@@ -21,10 +21,18 @@ namespace WindowsFormsApp1
     public partial class Login : Form
     {
         public static string token;
+        public static string section;
+        public static string utype;
+        public static string urole;
         public class Data
         {
             public string token { get; set; }
+            public string user_type { get; set; }
+            public string user_role { get; set; }
+            public string section { get; set; }
+            public string time { get; set; }
             public string ho_ten { get; set; }
+            public string email { get; set; }
         }
 
         public class Root
@@ -104,7 +112,8 @@ namespace WindowsFormsApp1
                 // Set the Method property of the request to POST.
                 request.Method = "POST";
                 // Create POST data and convert it to a byte array.
-                string postData = "email=" + txt_Email.Text + "&password=" + txt_MatKhau.Text;
+                string postData = "email=" + txt_Email.Text 
+                            + "&password=" + txt_MatKhau.Text;
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
                 // Set the ContentType property of the WebRequest.
@@ -118,16 +127,13 @@ namespace WindowsFormsApp1
                 dataStream.Write(byteArray, 0, byteArray.Length);
                 // Close the Stream object.
                 dataStream.Close();
-
                 try
                 {
                     lbl_ThongBao.Text = "";
                     // Get the response.
                     WebResponse response = request.GetResponse();
-                    // Display the status.
-                    Console.WriteLine(((HttpWebResponse)response).StatusDescription);
 
-                    Root datajson = null;
+                    Root datajson;
                     // Get the stream containing content returned by the server.
                     // The using block ensures the stream is automatically closed.
                     using (dataStream = response.GetResponseStream())
@@ -141,6 +147,9 @@ namespace WindowsFormsApp1
                         this.Hide();
                         token = datajson.data.token;
                         name = datajson.data.ho_ten;
+                        section = datajson.data.section;
+                        utype = datajson.data.user_type;
+                        urole = datajson.data.user_role;
                         Menu p = new Menu();
                         p.ShowDialog();
                         this.Show();
@@ -158,8 +167,8 @@ namespace WindowsFormsApp1
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txt_Email.Text = "longdx@gmail.com";
-            txt_MatKhau.Text = "9=HE=MQz9VvWLvcw*sX";
+            txt_Email.Text = "shipper@gmail.com";
+            txt_MatKhau.Text = "9a9hC]RA)LsvnU~w<";
         }
     }
 }

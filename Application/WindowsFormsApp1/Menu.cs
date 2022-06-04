@@ -47,7 +47,6 @@ namespace WindowsFormsApp1
             //phần response
             response = request.GetResponse();
         }
-
         private void btn_Info_Click(object sender, EventArgs e)
         {
             Profile p = new Profile();
@@ -71,7 +70,6 @@ namespace WindowsFormsApp1
             p.Show();  
         }
 
-        private int intselectedindex;
         private int i;
         private void LV_Data_SelectedIndexChanged(object sender, EventArgs e)
         {
