@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
 
         private void btn_Admin_Click(object sender, EventArgs e)
         {
-            List_User p = new List_User();
+            DB p = new DB();
             p.Show();
         }
 
@@ -135,11 +135,10 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_DonMua_Click(object sender, EventArgs e)
         {
             Bill p = new Bill();
             p.Show();
         }
-        
     }
 }

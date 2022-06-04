@@ -31,17 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_Name = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_DonMua = new System.Windows.Forms.Button();
             this.btn_Admin = new System.Windows.Forms.Button();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btn_Info = new System.Windows.Forms.Button();
             this.btn_DatHang = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LV_Data = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_SL = new System.Windows.Forms.TextBox();
-            this.LV_Data = new System.Windows.Forms.ListView();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +49,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.lb_Name);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_DonMua);
             this.panel1.Controls.Add(this.btn_Admin);
             this.panel1.Controls.Add(this.btn_Logout);
@@ -81,16 +78,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Tên người dùng:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(68, 424);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "List HH";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btn_DonMua
             // 
             this.btn_DonMua.BackColor = System.Drawing.SystemColors.Control;
@@ -100,6 +87,7 @@
             this.btn_DonMua.TabIndex = 2;
             this.btn_DonMua.Text = "Đơn Mua";
             this.btn_DonMua.UseVisualStyleBackColor = false;
+            this.btn_DonMua.Click += new System.EventHandler(this.btn_DonMua_Click);
             // 
             // btn_Admin
             // 
@@ -147,7 +135,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.LV_Data);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txt_SL);
@@ -157,6 +144,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(835, 727);
             this.panel2.TabIndex = 2;
+            // 
+            // LV_Data
+            // 
+            this.LV_Data.FullRowSelect = true;
+            this.LV_Data.HideSelection = false;
+            this.LV_Data.Location = new System.Drawing.Point(29, 12);
+            this.LV_Data.Name = "LV_Data";
+            this.LV_Data.Size = new System.Drawing.Size(780, 547);
+            this.LV_Data.TabIndex = 10;
+            this.LV_Data.UseCompatibleStateImageBehavior = false;
+            this.LV_Data.View = System.Windows.Forms.View.Details;
+            this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -174,28 +173,6 @@
             this.txt_SL.Size = new System.Drawing.Size(100, 22);
             this.txt_SL.TabIndex = 8;
             this.txt_SL.Text = "1";
-            // 
-            // LV_Data
-            // 
-            this.LV_Data.FullRowSelect = true;
-            this.LV_Data.HideSelection = false;
-            this.LV_Data.Location = new System.Drawing.Point(29, 12);
-            this.LV_Data.Name = "LV_Data";
-            this.LV_Data.Size = new System.Drawing.Size(780, 547);
-            this.LV_Data.TabIndex = 10;
-            this.LV_Data.UseCompatibleStateImageBehavior = false;
-            this.LV_Data.View = System.Windows.Forms.View.Details;
-            this.LV_Data.SelectedIndexChanged += new System.EventHandler(this.LV_Data_SelectedIndexChanged);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(402, 667);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 48);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Hóa đơn";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Menu
             // 
@@ -226,11 +203,9 @@
         private System.Windows.Forms.Button btn_Admin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_SL;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lb_Name;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView LV_Data;
-        private System.Windows.Forms.Button button2;
     }
 }
 

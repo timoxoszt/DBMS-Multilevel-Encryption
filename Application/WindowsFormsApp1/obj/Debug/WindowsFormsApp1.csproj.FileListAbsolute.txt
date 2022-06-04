@@ -61,3 +61,4 @@ E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\De
 E:\SUBJECT\DA_MMH\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.List_Bill.resources
 C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Bill.resources
 C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.List_Bill.resources
+C:\Users\super\Source\Repos\DBMS-Multilevel-Encryption\Application\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DB.resources
