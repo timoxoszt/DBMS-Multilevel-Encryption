@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "casbin/casbin": "^3.20",
+        "casbin/laravel-authz": "^3.1",
         "dyrynda/laravel-model-uuid": "^6.6",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
