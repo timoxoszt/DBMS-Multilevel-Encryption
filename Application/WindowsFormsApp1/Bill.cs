@@ -169,10 +169,37 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Đặt hàng thành công.", "Thông báo");
         }
-
+        private int intselectedindex;
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            int i = 0;
+            if (LV_Data.SelectedIndices.Count > 0)
+            {
+                intselectedindex = LV_Data.SelectedIndices[0];
+                if (intselectedindex >= 0)
+                {
+                    string text = LV_Data.Items[intselectedindex].Text;
+                    i = Int32.Parse(text);
+                }
+            }
+            string s = "https://dbms-abe.f1301.cyou/api/orders/" + dataprofile.data[i - 1].uuid.ToString();
+            var request = (HttpWebRequest)WebRequest.Create(s);
+            request.Headers["Authorization"] = "Bearer " + Login.token;
+            request.PreAuthenticate = true;
+            request.Method = "DELETE";
+            request.Accept = "*/*";
+            try
+            {
+                response = request.GetResponse();
+                HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+                request.Abort();
+                Refreshing();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bạn không phải là người sở hữu hóa đơn này.", "Thông báo");
+            }
+            Refreshing();
         }
     }
     

@@ -82,7 +82,11 @@ namespace WindowsFormsApp1
 
         private void List_HH_Load(object sender, EventArgs e)
         {
-            if(Login.urole.Contains("ChuShopHang") && Login.utype.Contains("Onwer"))
+            if(Login.urole.Contains("ChuShopHang") 
+                && Login.utype.Contains("Owner")
+                && (Login.section.Contains("Order")
+                && Login.section.Contains("Product")
+                && Login.section.Contains("User")))
             {
                 btn_Create.Visible = true;
                 btn_Del.Visible = true;

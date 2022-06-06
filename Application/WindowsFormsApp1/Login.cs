@@ -150,9 +150,19 @@ namespace WindowsFormsApp1
                         section = datajson.data.section;
                         utype = datajson.data.user_type;
                         urole = datajson.data.user_role;
-                        Menu p = new Menu();
-                        p.ShowDialog();
-                        this.Show();
+                        if(utype == "Employee" && urole == "NguoiGiaoHang" && section.Contains("Order"))
+                        {
+                            List_Bill p = new List_Bill();
+                            p.ShowDialog();
+                            this.Show();
+                        }
+                        else
+                        {
+                            Menu p = new Menu();
+                            p.ShowDialog();
+                            this.Show();
+                        }
+                        
                     }
                     // Close the response.
                     response.Close();
@@ -167,8 +177,14 @@ namespace WindowsFormsApp1
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txt_Email.Text = "shipper@gmail.com";
-            txt_MatKhau.Text = "9a9hC]RA)LsvnU~w<";
+            txt_Email.Text = "onlytien2002@gmail.com";
+            txt_MatKhau.Text = "F1301@@@";
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://dbms-abe.f1301.cyou/password/reset");
         }
     }
 }

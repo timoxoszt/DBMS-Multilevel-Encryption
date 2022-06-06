@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_Name = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -37,9 +38,11 @@
             this.btn_Info = new System.Windows.Forms.Button();
             this.btn_DatHang = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.LV_Data = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_SL = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +138,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.LV_Data);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txt_SL);
@@ -144,6 +148,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(835, 727);
             this.panel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label1.Location = new System.Drawing.Point(321, 611);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.TabIndex = 3;
             // 
             // LV_Data
             // 
@@ -173,6 +187,11 @@
             this.txt_SL.Size = new System.Drawing.Size(100, 22);
             this.txt_SL.TabIndex = 8;
             this.txt_SL.Text = "1";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Menu
             // 
@@ -206,6 +225,8 @@
         private System.Windows.Forms.Label lb_Name;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView LV_Data;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

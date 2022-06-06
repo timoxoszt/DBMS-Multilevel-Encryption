@@ -36,6 +36,8 @@
             this.btn_DangKy = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_ThongBao = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txt_Email
@@ -82,9 +84,9 @@
             // 
             // btn_DangKy
             // 
-            this.btn_DangKy.Location = new System.Drawing.Point(329, 244);
+            this.btn_DangKy.Location = new System.Drawing.Point(351, 244);
             this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(133, 32);
+            this.btn_DangKy.Size = new System.Drawing.Size(111, 32);
             this.btn_DangKy.TabIndex = 7;
             this.btn_DangKy.Text = "Đăng Ký";
             this.btn_DangKy.UseVisualStyleBackColor = true;
@@ -110,11 +112,33 @@
             this.lbl_ThongBao.Size = new System.Drawing.Size(0, 16);
             this.lbl_ThongBao.TabIndex = 9;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(160, 292);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Quên mật khẩu?";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(269, 292);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(36, 16);
+            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 332);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_ThongBao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_DangKy);
@@ -141,5 +165,7 @@
         private System.Windows.Forms.Button btn_DangKy;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_ThongBao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

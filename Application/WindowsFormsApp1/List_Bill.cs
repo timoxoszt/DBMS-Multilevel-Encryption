@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
             public string so_luong { get; set; }
             public object gia { get; set; }
             public string ngay_dat { get; set; }
+            public string sdt { get; set; }
+            public string dia_chi { get; set; }
         }
 
         public class Root
@@ -46,9 +48,9 @@ namespace WindowsFormsApp1
         {
             Connect();
             InitializeComponent();
-            LV_Data.Columns.Add("STT", 50);
-            LV_Data.Columns.Add("UUID", 150);
-            LV_Data.Columns.Add("User name", 205);
+            LV_Data.Columns.Add("STT", 40);
+            LV_Data.Columns.Add("Họ và tên", 150);
+            LV_Data.Columns.Add("Số điện thoại", 100);
         }
         private int i;
         private void List_Bill_Load(object sender, EventArgs e)
@@ -64,11 +66,11 @@ namespace WindowsFormsApp1
                 {
                     i++;
                     ListViewItem item = new ListViewItem(i.ToString());
-                    ListViewItem.ListViewSubItem uuid = new ListViewItem.ListViewSubItem(item, data.uuid);
+                    ListViewItem.ListViewSubItem sdt = new ListViewItem.ListViewSubItem(item, data.sdt);
                     ListViewItem.ListViewSubItem name = new ListViewItem.ListViewSubItem(item, data.user_name);
                     LV_Data.Items.Add(item);
-                    item.SubItems.Add(uuid);
                     item.SubItems.Add(name);
+                    item.SubItems.Add(sdt);
                 }
             }
         }
@@ -88,41 +90,16 @@ namespace WindowsFormsApp1
                     txt_Name.Text = dataprofile.data[i - 1].user_name.ToString();
                     txt_Masp.Text = dataprofile.data[i - 1].ma_sp.ToString();
                     txt_Tensp.Text = dataprofile.data[i - 1].ten_sp.ToString();
-                    txt_SL.Text = dataprofile.data[i - 1].so_luong.ToString();
                     txt_Date.Text = dataprofile.data[i - 1].ngay_dat.ToString();
+                    tB_Addr.Text = dataprofile.data[i - 1].dia_chi.ToString();
+                    tB_SDT.Text = dataprofile.data[i - 1].sdt.ToString();
                 }
             }
         }
         private int intselectedindex;
         private void btn_Del_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            if (LV_Data.SelectedIndices.Count > 0)
-            {
-                intselectedindex = LV_Data.SelectedIndices[0];
-                if (intselectedindex >= 0)
-                {
-                    string text = LV_Data.Items[intselectedindex].Text;
-                    i = Int32.Parse(text);
-                }
-            }
-            string s = "https://dbms-abe.f1301.cyou/api/orders/" + dataprofile.data[i - 1].uuid.ToString();
-            var request = (HttpWebRequest)WebRequest.Create(s);
-            request.Headers["Authorization"] = "Bearer " + Login.token;
-            request.PreAuthenticate = true;
-            request.Method = "DELETE";
-            request.Accept = "*/*";
-            try
-            {
-                response = request.GetResponse();
-                HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
-                request.Abort();
-                Refreshing();
-            }
-            catch(Exception)
-            {
-                MessageBox.Show("Bạn không phải là người sở hữu hóa đơn này.", "Thông báo");
-            }
+            
         }
 
         private void Refreshing()
@@ -143,11 +120,11 @@ namespace WindowsFormsApp1
                 {
                     i++;
                     ListViewItem item = new ListViewItem(i.ToString());
-                    ListViewItem.ListViewSubItem uuid = new ListViewItem.ListViewSubItem(item, data.uuid);
+                    ListViewItem.ListViewSubItem sdt = new ListViewItem.ListViewSubItem(item, data.sdt);
                     ListViewItem.ListViewSubItem name = new ListViewItem.ListViewSubItem(item, data.user_name);
                     LV_Data.Items.Add(item);
-                    item.SubItems.Add(uuid);
                     item.SubItems.Add(name);
+                    item.SubItems.Add(sdt);
                 }
             }
             request.Abort();

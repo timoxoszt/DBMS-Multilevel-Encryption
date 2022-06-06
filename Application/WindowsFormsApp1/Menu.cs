@@ -83,7 +83,19 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        private void btn_DatHang_Click(object sender, EventArgs e)
+
+        int seconds = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            seconds++;
+            if (seconds == 10)
+            {
+                timer1.Stop();
+                seconds = 0;
+                label1.Text = "";
+            }
+        }
+            private void btn_DatHang_Click(object sender, EventArgs e)
         {
             try
             {
@@ -103,6 +115,8 @@ namespace WindowsFormsApp1
                 dataStream.Write(byteArray, 0, byteArray.Length);
                 // Close the Stream object.
                 dataStream.Close();
+                timer1.Start();
+                label1.Text = "Đã cho vào giỏ hàng.";
                 request.Abort();
             }
             catch (Exception)
@@ -113,6 +127,10 @@ namespace WindowsFormsApp1
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            if(Login.utype == "Customer" && Login.urole == "NguoiMuaHang" && Login.section.Contains("Product"))
+            {
+                btn_Admin.Visible = false;
+            }
             lb_Name.Text = Login.name;
             using (Stream dataStream = response.GetResponseStream())
             {
