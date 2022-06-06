@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3684407353d74d65cefb49d0e0c5cd20",
+    "content-hash": "04d9ac897ed8becf75762ac405a7bb78",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -176,132 +176,6 @@
                 }
             ],
             "time": "2022-02-17T07:57:54+00:00"
-        },
-        {
-            "name": "casbin/laravel-authz",
-            "version": "v3.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-casbin/laravel-authz.git",
-                "reference": "14529baea790374565cb8789993e39c032e96ca1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-casbin/laravel-authz/zipball/14529baea790374565cb8789993e39c032e96ca1",
-                "reference": "14529baea790374565cb8789993e39c032e96ca1",
-                "shasum": ""
-            },
-            "require": {
-                "casbin/casbin": "~3.1",
-                "casbin/psr3-bridge": "^1.1",
-                "illuminate/console": "~5.5|~6.0|~7.0|~8.0|~9.0",
-                "illuminate/database": "~5.5|~6.0|~7.0|~8.0|~9.0",
-                "illuminate/support": "~5.5|~6.0|~7.0|~8.0|~9.0",
-                "php": ">=7.1.0"
-            },
-            "require-dev": {
-                "laravel/laravel": "~5.5|~6.0|~7.0|~8.0|~9.0",
-                "mockery/mockery": "^1.0",
-                "php-coveralls/php-coveralls": "^2.4",
-                "phpunit/phpunit": "~7.0|~8.0|~9.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Lauthz\\LauthzServiceProvider"
-                    ],
-                    "aliases": {
-                        "Enforcer": "Lauthz\\Facades\\Enforcer"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Lauthz\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "TechLee",
-                    "email": "techlee@qq.com"
-                }
-            ],
-            "description": "An authorization library that supports access control models like ACL, RBAC, ABAC in Laravel. ",
-            "keywords": [
-                "abac",
-                "access-control",
-                "acl",
-                "authorization",
-                "authz",
-                "casbin",
-                "laravel",
-                "permission",
-                "rbac"
-            ],
-            "support": {
-                "issues": "https://github.com/php-casbin/laravel-authz/issues",
-                "source": "https://github.com/php-casbin/laravel-authz/tree/v3.1.1"
-            },
-            "time": "2022-02-17T08:28:13+00:00"
-        },
-        {
-            "name": "casbin/psr3-bridge",
-            "version": "v1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-casbin/psr3-bridge.git",
-                "reference": "4b8133c77f2dc1093b3adeb5fc3af1e8de3d0eb1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-casbin/psr3-bridge/zipball/4b8133c77f2dc1093b3adeb5fc3af1e8de3d0eb1",
-                "reference": "4b8133c77f2dc1093b3adeb5fc3af1e8de3d0eb1",
-                "shasum": ""
-            },
-            "require": {
-                "casbin/casbin": "^2.0|^3.0",
-                "psr/log": "^1.1|^2.0|^3.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.2",
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "~7.0|~8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Casbin\\Bridge\\Logger\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "TechLee",
-                    "email": "techlee@qq.com"
-                }
-            ],
-            "description": "This library provides a PSR-3 compliant bridge for Casbin Logger.",
-            "keywords": [
-                "acl",
-                "casbin",
-                "logger",
-                "permission",
-                "psr-3",
-                "rbac"
-            ],
-            "support": {
-                "issues": "https://github.com/php-casbin/psr3-bridge/issues",
-                "source": "https://github.com/php-casbin/psr3-bridge/tree/v1.3.1"
-            },
-            "time": "2022-02-05T12:08:12+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
