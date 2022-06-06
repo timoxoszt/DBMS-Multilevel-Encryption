@@ -39,6 +39,8 @@ class Order extends JsonResource
             'ten_sp' => $ten_sp,
             'so_luong' => $this->so_luong,
             'gia' => $gia_sp,
+            'dia_chi' => Crypt::decryptString($user->dia_chi),
+            'sdt' => Crypt::decryptString($user->sdt),
             'ngay_dat' => $this->created_at->format('d/m/Y'),
         ];
     }
