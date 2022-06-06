@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 class ProductController extends BaseController
 {
     /*
-          ========= POLICY =========
+        ========= POLICY =========
         -- Thêm-Sửa-Xóa Orders|Users|Products -- 
         UserRole: {ChuShopHang}
         UserType: {Owner}

@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'longdx@gmail.com',
             'password' => bcrypt('9=HE=MQz9VvWLvcw*sX'),
             'user_role' => Crypt::encryptString('KeToan'),
-            'user_type' => Crypt::encryptString('Manage'),
+            'user_type' => Crypt::encryptString('Manager'),
             'section' => Crypt::encryptString('[Order,Product,User]'),
             'time' => Crypt::encryptString('7h-17h'),
         ]);
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'hieptv@gmail.com',
             'password' => bcrypt('HAgTgjgFB53F5YFns'),
             'user_role' => Crypt::encryptString('ThuKho'),
-            'user_type' => Crypt::encryptString('Manage'),
+            'user_type' => Crypt::encryptString('Manager'),
             'section' => Crypt::encryptString('Product'),
             'time' => Crypt::encryptString('7h-17h'),
         ]);
