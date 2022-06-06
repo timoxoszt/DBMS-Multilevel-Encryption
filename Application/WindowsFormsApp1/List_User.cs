@@ -56,6 +56,15 @@ namespace WindowsFormsApp1
         }
         private void List_User_Load(object sender, EventArgs e)
         {
+            if (Login.urole.Contains("ChuShopHang")
+                && Login.utype.Contains("Owner")
+                && (Login.section.Contains("Order")
+                && Login.section.Contains("Product")
+                && Login.section.Contains("User")))
+            {
+                btn_Del.Visible = true;
+                btn_Save.Visible = true;
+            }
             using (Stream dataStream = response.GetResponseStream())
             {
                 StreamReader reader = new StreamReader(dataStream);

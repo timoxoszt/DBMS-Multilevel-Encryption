@@ -62,6 +62,7 @@
             this.btn_Save.TabIndex = 23;
             this.btn_Save.Text = "Cập Nhật";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Visible = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // txt_STK
@@ -265,6 +266,7 @@
             this.btn_Del.TabIndex = 25;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Visible = false;
             this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // txt_Name

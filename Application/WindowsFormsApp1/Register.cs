@@ -131,7 +131,7 @@ namespace WindowsFormsApp1
             }
 
             //if (isValidName(txt_HoVaTen.Text))
-                if(txt_HoVaTen.Text != "")
+            if(txt_HoVaTen.Text != "")
             {
                // ++check;
                 lb_NC.Text = "";

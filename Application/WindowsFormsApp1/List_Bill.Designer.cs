@@ -37,6 +37,10 @@
             this.txt_User = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tB_SDT = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tB_Addr = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Date = new System.Windows.Forms.TextBox();
             this.txt_Tensp = new System.Windows.Forms.TextBox();
@@ -45,10 +49,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_UUID = new System.Windows.Forms.TextBox();
             this.lb_UUID = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tB_Addr = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tB_SDT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,7 @@
             this.txt_Masp.Location = new System.Drawing.Point(238, 157);
             this.txt_Masp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Masp.Name = "txt_Masp";
+            this.txt_Masp.ReadOnly = true;
             this.txt_Masp.Size = new System.Drawing.Size(190, 25);
             this.txt_Masp.TabIndex = 18;
             // 
@@ -116,6 +117,7 @@
             this.txt_Name.Location = new System.Drawing.Point(238, 110);
             this.txt_Name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Name.Name = "txt_Name";
+            this.txt_Name.ReadOnly = true;
             this.txt_Name.Size = new System.Drawing.Size(190, 25);
             this.txt_Name.TabIndex = 22;
             // 
@@ -139,6 +141,7 @@
             this.txt_User.Location = new System.Drawing.Point(238, 59);
             this.txt_User.Margin = new System.Windows.Forms.Padding(4);
             this.txt_User.Name = "txt_User";
+            this.txt_User.ReadOnly = true;
             this.txt_User.Size = new System.Drawing.Size(190, 25);
             this.txt_User.TabIndex = 17;
             // 
@@ -183,6 +186,54 @@
             this.panel1.Size = new System.Drawing.Size(537, 517);
             this.panel1.TabIndex = 11;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Navy;
+            this.label8.Location = new System.Drawing.Point(106, 370);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 17);
+            this.label8.TabIndex = 47;
+            this.label8.Text = "Số điện thoại";
+            // 
+            // tB_SDT
+            // 
+            this.tB_SDT.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tB_SDT.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tB_SDT.ForeColor = System.Drawing.Color.Navy;
+            this.tB_SDT.Location = new System.Drawing.Point(238, 367);
+            this.tB_SDT.Margin = new System.Windows.Forms.Padding(4);
+            this.tB_SDT.Name = "tB_SDT";
+            this.tB_SDT.ReadOnly = true;
+            this.tB_SDT.Size = new System.Drawing.Size(190, 25);
+            this.tB_SDT.TabIndex = 46;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Navy;
+            this.label7.Location = new System.Drawing.Point(106, 328);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 17);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Địa chỉ";
+            // 
+            // tB_Addr
+            // 
+            this.tB_Addr.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tB_Addr.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tB_Addr.ForeColor = System.Drawing.Color.Navy;
+            this.tB_Addr.Location = new System.Drawing.Point(238, 325);
+            this.tB_Addr.Margin = new System.Windows.Forms.Padding(4);
+            this.tB_Addr.Name = "tB_Addr";
+            this.tB_Addr.ReadOnly = true;
+            this.tB_Addr.Size = new System.Drawing.Size(190, 25);
+            this.tB_Addr.TabIndex = 44;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -203,6 +254,7 @@
             this.txt_Date.Location = new System.Drawing.Point(238, 285);
             this.txt_Date.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Date.Name = "txt_Date";
+            this.txt_Date.ReadOnly = true;
             this.txt_Date.Size = new System.Drawing.Size(190, 25);
             this.txt_Date.TabIndex = 42;
             // 
@@ -214,6 +266,7 @@
             this.txt_Tensp.Location = new System.Drawing.Point(238, 201);
             this.txt_Tensp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Tensp.Name = "txt_Tensp";
+            this.txt_Tensp.ReadOnly = true;
             this.txt_Tensp.Size = new System.Drawing.Size(190, 25);
             this.txt_Tensp.TabIndex = 32;
             // 
@@ -237,6 +290,7 @@
             this.txt_Price.Location = new System.Drawing.Point(238, 244);
             this.txt_Price.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Price.Name = "txt_Price";
+            this.txt_Price.ReadOnly = true;
             this.txt_Price.Size = new System.Drawing.Size(190, 25);
             this.txt_Price.TabIndex = 30;
             // 
@@ -260,6 +314,7 @@
             this.txt_UUID.Location = new System.Drawing.Point(238, 15);
             this.txt_UUID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_UUID.Name = "txt_UUID";
+            this.txt_UUID.ReadOnly = true;
             this.txt_UUID.Size = new System.Drawing.Size(190, 25);
             this.txt_UUID.TabIndex = 28;
             // 
@@ -274,52 +329,6 @@
             this.lb_UUID.Size = new System.Drawing.Size(93, 17);
             this.lb_UUID.TabIndex = 27;
             this.lb_UUID.Text = "Mã đơn hàng";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(106, 328);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 17);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Địa chỉ";
-            // 
-            // tB_Addr
-            // 
-            this.tB_Addr.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tB_Addr.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_Addr.ForeColor = System.Drawing.Color.Navy;
-            this.tB_Addr.Location = new System.Drawing.Point(238, 325);
-            this.tB_Addr.Margin = new System.Windows.Forms.Padding(4);
-            this.tB_Addr.Name = "tB_Addr";
-            this.tB_Addr.Size = new System.Drawing.Size(190, 25);
-            this.tB_Addr.TabIndex = 44;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(106, 370);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 17);
-            this.label8.TabIndex = 47;
-            this.label8.Text = "Số điện thoại";
-            // 
-            // tB_SDT
-            // 
-            this.tB_SDT.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tB_SDT.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_SDT.ForeColor = System.Drawing.Color.Navy;
-            this.tB_SDT.Location = new System.Drawing.Point(238, 367);
-            this.tB_SDT.Margin = new System.Windows.Forms.Padding(4);
-            this.tB_SDT.Name = "tB_SDT";
-            this.tB_SDT.Size = new System.Drawing.Size(190, 25);
-            this.tB_SDT.TabIndex = 46;
             // 
             // List_Bill
             // 

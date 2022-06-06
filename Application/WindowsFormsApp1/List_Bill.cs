@@ -55,7 +55,10 @@ namespace WindowsFormsApp1
         private int i;
         private void List_Bill_Load(object sender, EventArgs e)
         {
-            if (Login.utype.Contains("Customer") && Login.urole.Contains("NguoiMuaHang")) btn_Del.Visible = true;
+            if(Login.utype.Contains("Owner") && Login.urole.Contains("ChuShopHang"))
+            {
+
+            }
             using (Stream dataStream = response.GetResponseStream())
             {
                 StreamReader reader = new StreamReader(dataStream);

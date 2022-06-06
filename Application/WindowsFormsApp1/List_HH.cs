@@ -92,6 +92,14 @@ namespace WindowsFormsApp1
                 btn_Del.Visible = true;
                 btn_Set.Visible = true;
             }
+            if(Login.urole.Contains("ThuKho") 
+                && Login.utype.Contains("Manage")
+                && Login.section.Contains("Product"))
+            {
+                btn_Create.Visible = true;
+                btn_Del.Visible = true;
+                btn_Set.Visible = true;
+            }
             using (Stream dataStream = response.GetResponseStream())
             {
                 StreamReader reader = new StreamReader(dataStream);
