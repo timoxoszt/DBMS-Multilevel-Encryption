@@ -157,6 +157,13 @@ namespace WindowsFormsApp1
                             this.Show();
                         }
                         else
+                        if(utype == "Manager" && urole == "ThuKho" && section.Contains("Product"))
+                        {
+                            List_HH p = new List_HH();
+                            p.ShowDialog();
+                            this.Show();
+                        }
+                        else
                         {
                             Menu p = new Menu();
                             p.ShowDialog();
