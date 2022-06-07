@@ -184,8 +184,7 @@ namespace WindowsFormsApp1
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txt_Email.Text = "onlytien2002@gmail.com";
-            txt_MatKhau.Text = "F1301@@@";
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

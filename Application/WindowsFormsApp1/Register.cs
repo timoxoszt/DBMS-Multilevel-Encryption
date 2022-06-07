@@ -263,14 +263,7 @@ namespace WindowsFormsApp1
         }
         private void Create_An_Accout_Load(object sender, EventArgs e)
         {
-            txt_SoChungMinh.Text = "968573921";
-            txt_HoVaTen.Text = "Do Xuan Long";
-            txt_Email.Text = "long234234@gmail.com";
-            txt_DiaChi.Text = "80/3 dia chi";
-            txt_MatKhau.Text = "12345678";
-            txt_SDT.Text = "0987677899";
-            txt_STK.Text = "23847584357334";
-            txt_XNMatKhau.Text = "12345678";
+
         }
     }
 }
