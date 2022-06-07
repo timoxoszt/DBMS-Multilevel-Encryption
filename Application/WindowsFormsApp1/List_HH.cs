@@ -140,28 +140,36 @@ namespace WindowsFormsApp1
         private int intselectedindex;
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/products");
-            request.Headers["Authorization"] = "Bearer " + Login.token;
-            request.PreAuthenticate = true;
-            // Set the Method property of the request to POST.
-            request.Method = "POST";
-            string postData = "ma_sp=" + txt_ID.Text
-                            + "&ten_sp=" + txt_Name.Text
-                            + "&dvt=" + txt_DVT.Text
-                            + "&gia=" + txt_Price.Text;
-            //+ "&image=null";
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            request.ContentType = "application/x-www-form-urlencoded";
-            // Set the ContentLength property of the WebRequest.
-            request.ContentLength = byteArray.Length;
+            if(txt_DVT.Text == "" || txt_ID.Text == "" || txt_Name.Text == "" || txt_Price.Text == "")
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin.", "Thông báo");
+            }
+            else
+            {
+                WebRequest request = WebRequest.Create("https://dbms-abe.f1301.cyou/api/products");
+                request.Headers["Authorization"] = "Bearer " + Login.token;
+                request.PreAuthenticate = true;
+                // Set the Method property of the request to POST.
+                request.Method = "POST";
+                string postData = "ma_sp=" + txt_ID.Text
+                                + "&ten_sp=" + txt_Name.Text
+                                + "&dvt=" + txt_DVT.Text
+                                + "&gia=" + txt_Price.Text;
+                //+ "&image=null";
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+                request.ContentType = "application/x-www-form-urlencoded";
+                // Set the ContentLength property of the WebRequest.
+                request.ContentLength = byteArray.Length;
 
-            // Get the request stream.
-            Stream dataStream = request.GetRequestStream();
-            // Write the data to the request stream.
-            dataStream.Write(byteArray, 0, byteArray.Length);
-            // Close the Stream object.
-            dataStream.Close();
-            Refreshing();
+                // Get the request stream.
+                Stream dataStream = request.GetRequestStream();
+                // Write the data to the request stream.
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                // Close the Stream object.
+                dataStream.Close();
+                Refreshing();
+            }
+            
         }
         private void btn_Del_Click(object sender, EventArgs e)
         {
@@ -188,7 +196,7 @@ namespace WindowsFormsApp1
                 HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
                 request.Abort();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "Thông báo"); }
+            catch (Exception ex) { MessageBox.Show("Chưa chọn mặt hàng cần xóa.", "Thông báo"); }
             Refreshing();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -229,7 +237,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception)
             {
-                MessageBox.Show("Chọn user cần sửa", "Thông báo");
+                MessageBox.Show("Chọn mặt hàng cần sửa", "Thông báo");
             }
             Refreshing();
         }

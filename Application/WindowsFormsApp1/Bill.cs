@@ -141,28 +141,32 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string uuid = dataprofile.data[i - 1].uuid.ToString();
-            WebRequest request = HttpWebRequest.Create("https://dbms-abe.f1301.cyou/api/orders/" + uuid);
-            request.Headers["Authorization"] = "Bearer " + Login.token;
-            request.PreAuthenticate = true;
-            request.Method = "PUT";
-            string postData = "ma_sp=" + dataprofile.data[i - 1].ma_sp.ToString()
-                        + "&so_luong=" + txt_SL.Text;
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            request.ContentType = "application/x-www-form-urlencoded";
-            // Set the ContentLength property of the WebRequest.
-            request.ContentLength = byteArray.Length;
-            Stream dataStream = request.GetRequestStream();
-            // Write the data to the request stream.
-            dataStream.Write(byteArray, 0, byteArray.Length);
-            // Close the Stream object.
-            dataStream.Close();
-            int s = Int32.Parse(txt_Price.Text);
-            int sl = Int32.Parse(txt_SL.Text);
-            int tt = s * sl;
-            txt_TtPrice.Text = tt.ToString();
-            request.Abort();
-            Refreshing();
+            try
+            {
+                string uuid = dataprofile.data[i - 1].uuid.ToString();
+                WebRequest request = HttpWebRequest.Create("https://dbms-abe.f1301.cyou/api/orders/" + uuid);
+                request.Headers["Authorization"] = "Bearer " + Login.token;
+                request.PreAuthenticate = true;
+                request.Method = "PUT";
+                string postData = "ma_sp=" + dataprofile.data[i - 1].ma_sp.ToString()
+                            + "&so_luong=" + txt_SL.Text;
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+                request.ContentType = "application/x-www-form-urlencoded";
+                // Set the ContentLength property of the WebRequest.
+                request.ContentLength = byteArray.Length;
+                Stream dataStream = request.GetRequestStream();
+                // Write the data to the request stream.
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                // Close the Stream object.
+                dataStream.Close();
+                int s = Int32.Parse(txt_Price.Text);
+                int sl = Int32.Parse(txt_SL.Text);
+                int tt = s * sl;
+                txt_TtPrice.Text = tt.ToString();
+                request.Abort();
+                Refreshing();
+            }
+            catch (Exception) { }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -172,34 +176,38 @@ namespace WindowsFormsApp1
         private int intselectedindex;
         private void button2_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            if (LV_Data.SelectedIndices.Count > 0)
-            {
-                intselectedindex = LV_Data.SelectedIndices[0];
-                if (intselectedindex >= 0)
-                {
-                    string text = LV_Data.Items[intselectedindex].Text;
-                    i = Int32.Parse(text);
-                }
-            }
-            string s = "https://dbms-abe.f1301.cyou/api/orders/" + dataprofile.data[i - 1].uuid.ToString();
-            var request = (HttpWebRequest)WebRequest.Create(s);
-            request.Headers["Authorization"] = "Bearer " + Login.token;
-            request.PreAuthenticate = true;
-            request.Method = "DELETE";
-            request.Accept = "*/*";
             try
             {
-                response = request.GetResponse();
-                HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
-                request.Abort();
+                int i = 0;
+                if (LV_Data.SelectedIndices.Count > 0)
+                {
+                    intselectedindex = LV_Data.SelectedIndices[0];
+                    if (intselectedindex >= 0)
+                    {
+                        string text = LV_Data.Items[intselectedindex].Text;
+                        i = Int32.Parse(text);
+                    }
+                }
+                string s = "https://dbms-abe.f1301.cyou/api/orders/" + dataprofile.data[i - 1].uuid.ToString();
+                var request = (HttpWebRequest)WebRequest.Create(s);
+                request.Headers["Authorization"] = "Bearer " + Login.token;
+                request.PreAuthenticate = true;
+                request.Method = "DELETE";
+                request.Accept = "*/*";
+                try
+                {
+                    response = request.GetResponse();
+                    HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+                    request.Abort();
+                    Refreshing();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn không phải là người sở hữu hóa đơn này.", "Thông báo");
+                }
                 Refreshing();
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Bạn không phải là người sở hữu hóa đơn này.", "Thông báo");
-            }
-            Refreshing();
+            catch (Exception ex) { MessageBox.Show("Vui lòng chọn đơn cần xóa.", "Thông báo"); }
         }
     }
     
