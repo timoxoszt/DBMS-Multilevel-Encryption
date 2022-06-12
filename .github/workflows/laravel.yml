@@ -14,6 +14,10 @@ jobs:
       uses: actions/checkout@master
 
     - uses: actions/setup-node@master
+    
+    - name: Copy .env
+      working-directory: ./Backend
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
       working-directory: ./Backend
       run: composer install --optimize-autoloader --no-dev
@@ -23,6 +27,17 @@ jobs:
     - name: Directory Permissions
       working-directory: ./Backend
       run: chmod -R 777 storage bootstrap/cache
+    - name: Create Database
+      working-directory: ./Backend
+      run: |
+        mkdir -p database
+        touch database/database.sqlite
+    - name: Execute tests (Unit and Feature tests) via PHPUnit
+      working-directory: ./Backend
+      env:
+        DB_CONNECTION: sqlite
+        DB_DATABASE: database/database.sqlite
+      run: vendor/bin/phpunit
       
     # Upload code to server
     - name: copy files
