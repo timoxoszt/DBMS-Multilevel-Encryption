@@ -14,6 +14,8 @@ jobs:
       uses: actions/checkout@master
 
     - uses: actions/setup-node@master
+    - name: Change directory npm
+      run: cd Backend
     - name: Installing project dependencies
       run: npm install
     - name: Building the project
@@ -34,4 +36,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         overwrite: true
         source: "./*"
-        target: /public_html/
+        target: /public_html/DBMS-Multilevel-Encryption/
