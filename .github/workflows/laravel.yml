@@ -34,4 +34,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         overwrite: true
         source: "./*"
-        target: /public_html/DBMS-Multilevel-Encryption
+        target: /public_html/
