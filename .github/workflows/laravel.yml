@@ -14,12 +14,6 @@ jobs:
       uses: actions/checkout@master
 
     - uses: actions/setup-node@master
-    - name: Change directory npm
-      run: cd Backend
-    - name: Installing project dependencies
-      run: npm install
-    - name: Building the project
-      run: npm run production
     - name: Install Dependencies
       run: composer install --optimize-autoloader --no-dev
     - name: Generate key
