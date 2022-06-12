@@ -18,8 +18,10 @@ jobs:
       working-directory: ./Backend
       run: composer install --optimize-autoloader --no-dev
     - name: Generate key
+      working-directory: ./Backend
       run: php artisan key:generate
     - name: Directory Permissions
+      working-directory: ./Backend
       run: chmod -R 777 storage bootstrap/cache
       
     # Upload code to server
