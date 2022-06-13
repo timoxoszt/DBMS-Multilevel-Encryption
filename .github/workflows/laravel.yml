@@ -1,0 +1,49 @@
+name: Laravel Deploy Github Action
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  Deploy-Project:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get the latest code
+      uses: actions/checkout@master
+
+    - uses: actions/setup-node@master
+    
+    - name: Copy .env
+      working-directory: ./Backend
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    - name: Install Dependencies
+      working-directory: ./Backend
+      run: composer install --optimize-autoloader --no-dev
+    - name: Generate key
+      working-directory: ./Backend
+      run: php artisan key:generate
+    - name: Directory Permissions
+      working-directory: ./Backend
+      run: chmod -R 777 storage bootstrap/cache
+    - name: Create Database
+      working-directory: ./Backend
+      run: |
+        mkdir -p database
+        touch database/database.sqlite
+      
+    # Upload code to server
+#     - name: Auto deploy
+#       uses: appleboy/ssh-action@master
+#       with:
+#         host: ${{ secrets.SSH_HOST }}
+#         username: ${{ secrets.SSH_USERNAME }}
+#         password: ${{ secrets.SSH_PASSWORD }}
+#         port: ${{ secrets.SSH_PORT }}
+#         script: |
+#           whoami
+#           ls -la
+#         overwrite: true
+#         source: "./*"
+#         target: /public_html/DBMS-Multilevel-Encryption/
